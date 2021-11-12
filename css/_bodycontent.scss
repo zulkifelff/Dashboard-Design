@@ -1,0 +1,47 @@
+.page-heading-style {
+  text-align: left;
+  font-weight: 700;
+  font-size: 24px;
+  letter-spacing: 0px;
+  color: #111111;
+  line-height: 35px;
+}
+
+
+.content-section-styling {
+  margin-top: 20px;
+}
+
+
+.content-section-styling {
+  width: calc(100% - 200px);
+  padding: 20px 35px;
+  min-height: 100vh;
+  transition: all 0.3s;
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  background: rgba(248, 250, 251, 1) 0% 0% no-repeat padding-box;
+}
+
+
+.search-bar-design {
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+  box-shadow: 0px 1px 1px #0000000F;
+  border-radius: 6px;
+  border: 0px solid transparent;
+  outline: 0;
+
+  text-align: left;
+  font-size: 12px;
+  font-weight: 400;
+
+  letter-spacing: 0px;
+  padding: 16px 11px;
+  opacity: 0.48;
+}
+
+.search-bar-design {
+  color: rgb(20, 13, 50, 1);
+}
