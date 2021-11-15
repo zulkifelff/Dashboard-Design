@@ -9,6 +9,9 @@
           crossorigin="anonymous" referrerpolicy="no-referrer"/>
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css"
+          integrity="sha512-aOG0c6nPNzGk+5zjwyJaoRUgCdOrfSDhmMID2u4+OIslr0GjpLKo7Xm0Ao3xmpM4T8AmIouRkqwj1nrdVsLKEQ=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap"
@@ -94,29 +97,679 @@
 <!--Main Section Body-->
 <section id="content" class="content-section-styling">
 
+    <!--    Heading Section-->
     <div class="heading-section clearfix">
         <div class="float-left">
             <div class="float-left"><span class="page-heading-style">Loads</span></div>
-        <div class="float-left page-tabber ml-20">
-            <div class="page-tab-design">
-                <span class="active">All</span>
-                <span>Open</span>
-                <span>Closed</span>
+            <div class="float-left page-tabber ml-20">
+                <div class="page-tab-design">
+                    <span class="active">All</span>
+                    <span>Open</span>
+                    <span>Closed</span>
+                </div>
+
             </div>
-
         </div>
-        </div>
-
         <div class="float-right">
             <button class="btn-styling blue"> + Create Load</button>
         </div>
+    </div>
+    <!--    Search and Filter All Shit-->
+    <div class="row mt-20">
+        <div class="col-md-8 col-sm-12">
+            <div class="clearfix search-filter-utility">
+                <span class=" form-control-feedback"></span>
+                <input onblur="SearchBarBlurred()"
+                       onfocus="SearchBarFocused()"
+                       type="text" class="search-bar-design" placeholder="Search">
+            </div>
+            <div class="search-result scrollY lighter">
+                   <div class="clearfix">
+                    <span class="font-weight-bold category-name-style">Bidder Location</span>
+                    <ul class="search-category">
+                        <li>
+                            <a href="#">DHA Phase VIII</a></li>
+                         <li>
+                            <a href="#">DHA Phase VII</a></li>
+                         <li>
+                            <a href="#">DHA Phase VI</a></li>
+                    </ul>
+                </div>
+
+                <div class="clearfix">
+                    <span class="font-weight-bold">Bidder Name</span>
+                    <ul class="search-category">
+                        <li>
+                            <a href="#">Ehmad Zubair</a></li>
+                         <li>
+                            <a href="#">Sher Ali</a></li>
+                         <li>
+                            <a href="#">Ahmad Buksh</a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+        </div>
+        <div class="col-sm-6 col-md-2">
+            <span class=" filter-control-feedback"></span>
+            <input id="datepicker" type="text" placeholder="Select Date" class="filter-date-type">
+        </div>
+        <div class="col-sm-6 col-md-1 toggle-style">
+            <button class="grid-layout-style active">
+                <img src="images/grid-active.svg" alt="Grid Active Icon">
+            </button>
+            <button class="list-layout-style">
+                <img src="images/list-non-active.svg" alt="List NonActive Icon">
+            </button>
+        </div>
+    </div>
+
+    <div class="row mt-20">
+
+        <!--        Each Load-->
+        <div class=" col-sm-6 col-md-3 mb-20">
+            <div class="individual-load-detail ">
+                <div class="row early-details no-gutters">
+                    <div class="float-left">
+                        <span class="load-name-style">Load 121331</span>
+                        <h2 class="load-weight-style">30 Feet</h2>
+                    </div>
+
+                    <div class="float-right">
+                        <button class="load-bids-btn">5 Bids</button>
+                    </div>
+                </div>
+                <div class="row no-gutters mt-15 positioning-direction">
+                    <div class="start-section">
+                        <div class="float-left">
+                            <img src="images/start-icon.svg" alt="Pickup Icon">
+                        </div>
+
+                        <div class="float-right">
+                            <span class="address-styling">Sector 11, Do darya, Karachi</span>
+                        </div>
+                    </div>
+
+                    <div class="straight-bordering">
+                    </div>
+
+
+                    <div class="end-section">
+
+                        <div class="float-left">
+                            <img src="images/destination-icon.svg" alt="Destination Icon">
+                        </div>
+
+                        <div class="float-right">
+                            <span class="address-styling">DHA Phase 7, Lahore</span>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="row no-gutters mt-20">
+                    <div class="lowest-bid-style">
+                        <span class="">Lowest Bid</span>
+                        <span class="font-weight-bold">Rs. 12,000,000</span>
+                    </div>
+                </div>
+            </div>
+            <div class="individual-progress-detail clearfix">
+                <div class="float-left">
+
+                    <div role="progressbar"
+                         aria-valuenow="65"
+                         aria-valuemin="0"
+                         aria-valuemax="100"
+                         style="--value:65">
+
+                    </div>
+
+                </div>
+
+                <div class="float-left">
+                    <p class="time-left-heading">
+                        Time Left
+                    </p>
+                    <p class="time-left-value-style">
+                        1 Day 7 hrs left
+                    </p>
+                </div>
+
+                <div class="float-right">
+                    <span style="" class="bid-status open">Open</span>
+                </div>
+            </div>
+        </div>
+
+        <!--        Each Load-->
+        <div class=" col-sm-6 col-md-3 mb-20">
+            <div class="individual-load-detail ">
+                <div class="row early-details no-gutters">
+                    <div class="float-left">
+                        <span class="load-name-style">Load 121331</span>
+                        <h2 class="load-weight-style">30 Feet</h2>
+                    </div>
+
+                    <div class="float-right">
+                        <button class="load-bids-btn">10 Bids</button>
+                    </div>
+                </div>
+                <div class="row no-gutters mt-15 positioning-direction">
+                    <div class="start-section">
+                        <div class="float-left">
+                            <img src="images/start-icon.svg" alt="Pickup Icon">
+                        </div>
+
+                        <div class="float-right">
+                            <span class="address-styling">Sector 11, Do darya, Karachi</span>
+                        </div>
+                    </div>
+
+                    <div class="straight-bordering">
+                    </div>
+
+
+                    <div class="end-section">
+
+                        <div class="float-left">
+                            <img src="images/destination-icon.svg" alt="Destination Icon">
+                        </div>
+
+                        <div class="float-right">
+                            <span class="address-styling">DHA Phase 7, Lahore</span>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="row no-gutters mt-20">
+                    <div class="lowest-bid-style">
+                        <span class="">Lowest Bid</span>
+                        <span class="font-weight-bold">Rs. 85,000,000</span>
+                    </div>
+                </div>
+            </div>
+            <div class="individual-progress-detail clearfix">
+                <div class="float-left">
+
+                    <div role="progressbar"
+                         aria-valuenow="65"
+                         aria-valuemin="0"
+                         aria-valuemax="100"
+                         style="--value:65">
+
+                    </div>
+
+                </div>
+
+                <div class="float-left">
+                    <p class="time-left-heading">
+                        Time Left
+                    </p>
+                    <p class="time-left-value-style">
+                        1 Day 7 hrs left
+                    </p>
+                </div>
+
+                <div class="float-right">
+                    <span style="" class="bid-status open">Open</span>
+                </div>
+            </div>
+        </div>
+
+        <!--        Each Load-->
+        <div class=" col-sm-6 col-md-3 mb-20">
+            <div class="individual-load-detail ">
+                <div class="row early-details no-gutters">
+                    <div class="float-left">
+                        <span class="load-name-style">Load 121331</span>
+                        <h2 class="load-weight-style">30 Feet</h2>
+                    </div>
+
+                    <div class="float-right">
+                        <button class="load-bids-btn">5 Bids</button>
+                    </div>
+                </div>
+                <div class="row no-gutters mt-15 positioning-direction">
+                    <div class="start-section">
+                        <div class="float-left">
+                            <img src="images/start-icon.svg" alt="Pickup Icon">
+                        </div>
+
+                        <div class="float-right">
+                            <span class="address-styling">Sector 11, Do darya, Karachi</span>
+                        </div>
+                    </div>
+
+                    <div class="straight-bordering">
+                    </div>
+
+
+                    <div class="end-section">
+
+                        <div class="float-left">
+                            <img src="images/destination-icon.svg" alt="Destination Icon">
+                        </div>
+
+                        <div class="float-right">
+                            <span class="address-styling">DHA Phase 7, Lahore</span>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="row no-gutters mt-20">
+                    <div class="lowest-bid-style">
+                        <span class="">Lowest Bid</span>
+                        <span class="font-weight-bold">Rs. 12,000,000</span>
+                    </div>
+                </div>
+            </div>
+            <div class="individual-progress-detail clearfix">
+                <div class="float-left">
+
+                    <div role="progressbar"
+                         aria-valuenow="45"
+                         aria-valuemin="0"
+                         aria-valuemax="100"
+                         style="--value:45">
+
+                    </div>
+
+                </div>
+
+                <div class="float-left">
+                    <p class="time-left-heading">
+                        Time Left
+                    </p>
+                    <p class="time-left-value-style">
+                        2 Day 14 hrs left
+                    </p>
+                </div>
+
+                <div class="float-right">
+                    <span style="" class="bid-status closed">Close</span>
+                </div>
+            </div>
+        </div>
+
+        <!--        Each Load-->
+        <div class=" col-sm-6 col-md-3 mb-20">
+            <div class="individual-load-detail ">
+                <div class="row early-details no-gutters">
+                    <div class="float-left">
+                        <span class="load-name-style">Load 121331</span>
+                        <h2 class="load-weight-style">30 Feet</h2>
+                    </div>
+
+                    <div class="float-right">
+                        <button class="load-bids-btn">5 Bids</button>
+                    </div>
+                </div>
+                <div class="row no-gutters mt-15 positioning-direction">
+                    <div class="start-section">
+                        <div class="float-left">
+                            <img src="images/start-icon.svg" alt="Pickup Icon">
+                        </div>
+
+                        <div class="float-right">
+                            <span class="address-styling">Sector 11, Do darya, Karachi</span>
+                        </div>
+                    </div>
+
+                    <div class="straight-bordering">
+                    </div>
+
+
+                    <div class="end-section">
+
+                        <div class="float-left">
+                            <img src="images/destination-icon.svg" alt="Destination Icon">
+                        </div>
+
+                        <div class="float-right">
+                            <span class="address-styling">DHA Phase 7, Lahore</span>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="row no-gutters mt-20">
+                    <div class="lowest-bid-style">
+                        <span class="">Lowest Bid</span>
+                        <span class="font-weight-bold">Rs. 12,000,000</span>
+                    </div>
+                </div>
+            </div>
+            <div class="individual-progress-detail clearfix">
+                <div class="float-left">
+
+                    <div role="progressbar"
+                         aria-valuenow="95"
+                         aria-valuemin="0"
+                         aria-valuemax="100"
+                         style="--value:95">
+
+                    </div>
+
+                </div>
+
+                <div class="float-left">
+                    <p class="time-left-heading">
+                        Time Left
+                    </p>
+                    <p class="time-left-value-style">
+                        2 Day 0 hrs left
+                    </p>
+                </div>
+
+                <div class="float-right">
+                    <span style="" class="bid-status closed">Close</span>
+                </div>
+            </div>
+        </div>
+
+        <!--        Each Load-->
+        <div class=" col-sm-6 col-md-3 mb-20">
+            <div class="individual-load-detail ">
+                <div class="row early-details no-gutters">
+                    <div class="float-left">
+                        <span class="load-name-style">Load 121331</span>
+                        <h2 class="load-weight-style">30 Feet</h2>
+                    </div>
+
+                    <div class="float-right">
+                        <button class="load-bids-btn">5 Bids</button>
+                    </div>
+                </div>
+                <div class="row no-gutters mt-15 positioning-direction">
+                    <div class="start-section">
+                        <div class="float-left">
+                            <img src="images/start-icon.svg" alt="Pickup Icon">
+                        </div>
+
+                        <div class="float-right">
+                            <span class="address-styling">Sector 11, Do darya, Karachi</span>
+                        </div>
+                    </div>
+
+                    <div class="straight-bordering">
+                    </div>
+
+
+                    <div class="end-section">
+
+                        <div class="float-left">
+                            <img src="images/destination-icon.svg" alt="Destination Icon">
+                        </div>
+
+                        <div class="float-right">
+                            <span class="address-styling">DHA Phase 7, Lahore</span>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="row no-gutters mt-20">
+                    <div class="lowest-bid-style">
+                        <span class="">Lowest Bid</span>
+                        <span class="font-weight-bold">Rs. 12,000,000</span>
+                    </div>
+                </div>
+            </div>
+            <div class="individual-progress-detail clearfix">
+                <div class="float-left">
+
+                    <div role="progressbar"
+                         aria-valuenow="65"
+                         aria-valuemin="0"
+                         aria-valuemax="100"
+                         style="--value:65">
+
+                    </div>
+
+                </div>
+
+                <div class="float-left">
+                    <p class="time-left-heading">
+                        Time Left
+                    </p>
+                    <p class="time-left-value-style">
+                        1 Day 7 hrs left
+                    </p>
+                </div>
+
+                <div class="float-right">
+                    <span style="" class="bid-status open">Open</span>
+                </div>
+            </div>
+        </div>
+
+        <!--        Each Load-->
+        <div class=" col-sm-6 col-md-3 mb-20">
+            <div class="individual-load-detail ">
+                <div class="row early-details no-gutters">
+                    <div class="float-left">
+                        <span class="load-name-style">Load 121331</span>
+                        <h2 class="load-weight-style">90 Feet</h2>
+                    </div>
+
+                    <div class="float-right">
+                        <button class="load-bids-btn">50 Bids</button>
+                    </div>
+                </div>
+                <div class="row no-gutters mt-15 positioning-direction">
+                    <div class="start-section">
+                        <div class="float-left">
+                            <img src="images/start-icon.svg" alt="Pickup Icon">
+                        </div>
+
+                        <div class="float-right">
+                            <span class="address-styling">Sector 11, Do darya, Karachi</span>
+                        </div>
+                    </div>
+
+                    <div class="straight-bordering">
+                    </div>
+
+
+                    <div class="end-section">
+
+                        <div class="float-left">
+                            <img src="images/destination-icon.svg" alt="Destination Icon">
+                        </div>
+
+                        <div class="float-right">
+                            <span class="address-styling">DHA Phase 7, Lahore</span>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="row no-gutters mt-20">
+                    <div class="lowest-bid-style">
+                        <span class="">Lowest Bid</span>
+                        <span class="font-weight-bold">Rs. 18,000,000</span>
+                    </div>
+                </div>
+            </div>
+            <div class="individual-progress-detail clearfix">
+                <div class="float-left">
+
+                    <div role="progressbar"
+                         aria-valuenow="35"
+                         aria-valuemin="0"
+                         aria-valuemax="100"
+                         style="--value:35">
+
+                    </div>
+
+                </div>
+
+                <div class="float-left">
+                    <p class="time-left-heading">
+                        Time Left
+                    </p>
+                    <p class="time-left-value-style">
+                        8 Day 17 hrs left
+                    </p>
+                </div>
+
+                <div class="float-right">
+                    <span style="" class="bid-status open">Open</span>
+                </div>
+            </div>
+        </div>
+
+         <!--        Each Load-->
+        <div class=" col-sm-6 col-md-3 mb-20">
+            <div class="individual-load-detail ">
+                <div class="row early-details no-gutters">
+                    <div class="float-left">
+                        <span class="load-name-style">Load 121331</span>
+                        <h2 class="load-weight-style">90 Feet</h2>
+                    </div>
+
+                    <div class="float-right">
+                        <button class="load-bids-btn">50 Bids</button>
+                    </div>
+                </div>
+                <div class="row no-gutters mt-15 positioning-direction">
+                    <div class="start-section">
+                        <div class="float-left">
+                            <img src="images/start-icon.svg" alt="Pickup Icon">
+                        </div>
+
+                        <div class="float-right">
+                            <span class="address-styling">Sector 11, Do darya, Karachi</span>
+                        </div>
+                    </div>
+
+                    <div class="straight-bordering">
+                    </div>
+
+
+                    <div class="end-section">
+
+                        <div class="float-left">
+                            <img src="images/destination-icon.svg" alt="Destination Icon">
+                        </div>
+
+                        <div class="float-right">
+                            <span class="address-styling">DHA Phase 7, Lahore</span>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="row no-gutters mt-20">
+                    <div class="lowest-bid-style">
+                        <span class="">Lowest Bid</span>
+                        <span class="font-weight-bold">Rs. 18,000,000</span>
+                    </div>
+                </div>
+            </div>
+            <div class="individual-progress-detail clearfix">
+                <div class="float-left">
+
+                    <div role="progressbar"
+                         aria-valuenow="35"
+                         aria-valuemin="0"
+                         aria-valuemax="100"
+                         style="--value:35">
+
+                    </div>
+
+                </div>
+
+                <div class="float-left">
+                    <p class="time-left-heading">
+                        Time Left
+                    </p>
+                    <p class="time-left-value-style">
+                        8 Day 17 hrs left
+                    </p>
+                </div>
+
+                <div class="float-right">
+                    <span style="" class="bid-status open">Open</span>
+                </div>
+            </div>
+        </div>
+
+         <!--        Each Load-->
+        <div class=" col-sm-6 col-md-3 mb-20">
+            <div class="individual-load-detail ">
+                <div class="row early-details no-gutters">
+                    <div class="float-left">
+                        <span class="load-name-style">Load 121331</span>
+                        <h2 class="load-weight-style">90 Feet</h2>
+                    </div>
+
+                    <div class="float-right">
+                        <button class="load-bids-btn">50 Bids</button>
+                    </div>
+                </div>
+                <div class="row no-gutters mt-15 positioning-direction">
+                    <div class="start-section">
+                        <div class="float-left">
+                            <img src="images/start-icon.svg" alt="Pickup Icon">
+                        </div>
+
+                        <div class="float-right">
+                            <span class="address-styling">Sector 11, Do darya, Karachi</span>
+                        </div>
+                    </div>
+
+                    <div class="straight-bordering">
+                    </div>
+
+
+                    <div class="end-section">
+
+                        <div class="float-left">
+                            <img src="images/destination-icon.svg" alt="Destination Icon">
+                        </div>
+
+                        <div class="float-right">
+                            <span class="address-styling">DHA Phase 7, Lahore</span>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="row no-gutters mt-20">
+                    <div class="lowest-bid-style">
+                        <span class="">Lowest Bid</span>
+                        <span class="font-weight-bold">Rs. 1,000,000</span>
+                    </div>
+                </div>
+            </div>
+            <div class="individual-progress-detail clearfix">
+                <div class="float-left">
+
+                    <div role="progressbar"
+                         aria-valuenow="69"
+                         aria-valuemin="0"
+                         aria-valuemax="100"
+                         style="--value:69">
+
+                    </div>
+
+                </div>
+
+                <div class="float-left">
+                    <p class="time-left-heading">
+                        Time Left
+                    </p>
+                    <p class="time-left-value-style">
+                        8 Day 17 hrs left
+                    </p>
+                </div>
+
+                <div class="float-right">
+                    <span style="" class="bid-status closed">Close</span>
+                </div>
+            </div>
+        </div>
+
 
     </div>
 
-
-    <div class="clearfix search-filter-utility">
-        <input type="text" class="search-bar-design" placeholder="Search">
-    </div>
 
 </section>
 
@@ -129,6 +782,16 @@
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"
+        integrity="sha512-uto9mlQzrs59VwILcLiRYeLKPPbS/bT71da/OEBYEwcdNUk8jYIy+D176RYoop1Da+f9mvkYrmj5MCLZWEtQuA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="js/bootstrap.js"></script>
+
+<script src="js/site.js">
+
+</script>
+
+
+
 </body>
 </html>
