@@ -1,51 +1,45 @@
 @import "progress-style";
+@import "variable";
+//colors
+
 
 .page-heading-style {
   text-align: left;
   font-weight: 700;
   font-size: 24px;
-  letter-spacing: 0px;
-  color: #111111;
+  letter-spacing: 0;
+  color: $color_cod_gray_approx;
   line-height: 35px;
 }
 
-
 .content-section-styling {
   //margin-top: 20px;
-}
-
-
-.content-section-styling {
   width: calc(100% - 200px);
   padding: 20px 35px;
   min-height: 100vh;
+  //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
   transition: all 0.3s;
   position: absolute;
   top: 0;
   right: 0;
-
-  background: rgba(248, 250, 251, 1) 0% 0% no-repeat padding-box;
+  background: $color_porcelain_approx 0 0 no-repeat padding-box;
 }
-
 
 .search-bar-design {
   height: 40px;
-
-  background: #FFFFFF 0% 0% no-repeat padding-box;
-  box-shadow: 0px 1px 1px #0000000f;
+  background: $white 0 0 no-repeat padding-box;
+  //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+  box-shadow: 0 1px 1px #0000000f;
+  //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
   border-radius: 6px;
-  border: 0px solid transparent;
+  border: 0 solid transparent;
   outline: 0;
   text-align: left;
   font-size: 12px;
   font-weight: 400;
-  letter-spacing: 0px;
+  letter-spacing: 0;
   padding: 15px 40px;
   //opacity: 0.48;
-
-}
-
-.search-bar-design {
   color: rgb(20, 13, 50, 1);
   width: 100%;
 }
@@ -58,43 +52,39 @@
   height: 16px;
   margin-left: 15px;
   background-repeat: no-repeat;
-  background-position: 0% 0%;
+  background-position: 0 0;
+  //Instead of the line below you could use @include background-origin($origin)
   background-origin: padding-box;
   background-color: transparent;
+  //Instead of the line below you could use @include background-clip($clip)
   background-clip: padding-box;
-}
-
-.form-control-feedback {
-  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAARCAYAAADUryzEAAAABHNCSVQICAgIfAhkiAAAAWBJREFUOE/Fk+FRg0AQRnM0INCASQUhHYQGnKSC2IGxArECUwJWYGYsIJSAFYQKIDYAvo+5Y4AhcfwlMwy7e/u93btbzGz0+L6/9jxv1zTNmqW5Xc7wj9jvF56+xDgHoW+M+cCX8BtbgkLriDd8lrwX7C2MzOlagBWfMBckJCQcpjoDqvjSQlRg1gKCIBAxUtuI87F41KVy78ldkVsY7RnyicDzVOWJTrTVQlssy/LRhGGYqnJVVe7ArjXQxdEc0DyhMYb2RctE+1VpE3pdxwI0AF4BJP8G0KnesZ/VHzrY0/Ub57DQLTgn7g/ILZjOTUNF0UiA9loInCEKMhjVMYgbSMh7sbmZm8R2FkjOb0Hc9ZH3SfWHbhJl0MgGSIqpW0nrum5H1T4RsT22ZqXk9WyhvPuZLGTOn6gWdxNn8EVckFxzw1fjHA8AfZGGpecXmnvn23MTxL8KmOhgEBJEW/oBLiPQha2U6yYAAAAASUVORK5CYII=');
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAARCAYAAADUryzEAAAABHNCSVQICAgIfAhkiAAAAWBJREFUOE/Fk+FRg0AQRnM0INCASQUhHYQGnKSC2IGxArECUwJWYGYsIJSAFYQKIDYAvo+5Y4AhcfwlMwy7e/u93btbzGz0+L6/9jxv1zTNmqW5Xc7wj9jvF56+xDgHoW+M+cCX8BtbgkLriDd8lrwX7C2MzOlagBWfMBckJCQcpjoDqvjSQlRg1gKCIBAxUtuI87F41KVy78ldkVsY7RnyicDzVOWJTrTVQlssy/LRhGGYqnJVVe7ArjXQxdEc0DyhMYb2RctE+1VpE3pdxwI0AF4BJP8G0KnesZ/VHzrY0/Ub57DQLTgn7g/ILZjOTUNF0UiA9loInCEKMhjVMYgbSMh7sbmZm8R2FkjOb0Hc9ZH3SfWHbhJl0MgGSIqpW0nrum5H1T4RsT22ZqXk9WyhvPuZLGTOn6gWdxNn8EVckFxzw1fjHA8AfZGGpecXmnvn23MTxL8KmOhgEBJEW/oBLiPQha2U6yYAAAAASUVORK5CYII=");
 }
 
 .search-filter-utility {
   position: relative;
 }
 
-
 .filter-date-type {
-  background: white 0% 0% no-repeat padding-box;
-  box-shadow: 0px 1px 1px rgb(0 0 0 / 6%);
+  background: $white 0 0 no-repeat padding-box;
+  //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+  box-shadow: 0 1px 1px rgb(0 0 0 / 6%);
+  //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
   border-radius: 6px;
   outline: 0;
-  border: 0px solid transparent;
+  border: 0 solid transparent;
   text-align: left;
-  width: 100%;
   font-size: 11px;
   line-height: 18px;
   height: 40px;
-  letter-spacing: 0px;
-  color: #140d32;
+  letter-spacing: 0;
+  color: $color_haiti_approx;
   width: 100%;
-  padding: 14px 0px 12px 40px;
+  padding: 14px 0 12px 40px;
 }
 
 .filter-control-feedback {
-  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAASCAYAAAC9+TVUAAAABHNCSVQICAgIfAhkiAAAAZJJREFUOE/tU00vA2EQnilSB6LHXnwcJBwc1B9QV6RbLrol0V9At+LkUmdpdntxcdBGtIToB3cOfgCJa0UiceBCXBzaHc9uLe0SKnE0yZN3Z+Z9n3d23nmYXKbqpQoxbebjSqoxNW+Up02R3Wpbx+DB0uRDY44dJ6IXgkSecQSSiN0ScaWJn8VPQsOIHWI9ySeUrJO3SXB7Bssi8AR0AXfAtatIP/wh4BnoBi68ZE5ktJlHVvVynEh03KzltZABwntm3srFQ2uNJKpRWkAFO+3M/VXhMSKzgHw2rykxkJTO4PjgjFqHIqli795KGL/z2eY2jkb2V2ev3qo3sC7jHFskAicNBxW1blG9HBOSbSYz4JA0n2Z6+ZJOqNMdr5kyVSdhPkfSQsuGF+kTkaiguTYJAus5TUm2zGD1DiPB5Dn9J/no2p/0xD0n1sT2YNgCv3kdvGrjxNa1w0LxXEJJt0Lk/Mq7dmy96KUiZkXB5w2ECHxn4kPW0tklVBy0VexsV/XjMJQJ0MDP1XDRS7WMRWDtfQVCXceEk7KnoQAAAABJRU5ErkJggg==')
-}
-
-.filter-control-feedback {
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAASCAYAAAC9+TVUAAAABHNCSVQICAgIfAhkiAAAAZJJREFUOE/tU00vA2EQnilSB6LHXnwcJBwc1B9QV6RbLrol0V9At+LkUmdpdntxcdBGtIToB3cOfgCJa0UiceBCXBzaHc9uLe0SKnE0yZN3Z+Z9n3d23nmYXKbqpQoxbebjSqoxNW+Up02R3Wpbx+DB0uRDY44dJ6IXgkSecQSSiN0ScaWJn8VPQsOIHWI9ySeUrJO3SXB7Bssi8AR0AXfAtatIP/wh4BnoBi68ZE5ktJlHVvVynEh03KzltZABwntm3srFQ2uNJKpRWkAFO+3M/VXhMSKzgHw2rykxkJTO4PjgjFqHIqli795KGL/z2eY2jkb2V2ev3qo3sC7jHFskAicNBxW1blG9HBOSbSYz4JA0n2Z6+ZJOqNMdr5kyVSdhPkfSQsuGF+kTkaiguTYJAus5TUm2zGD1DiPB5Dn9J/no2p/0xD0n1sT2YNgCv3kdvGrjxNa1w0LxXEJJt0Lk/Mq7dmy96KUiZkXB5w2ECHxn4kPW0tklVBy0VexsV/XjMJQJ0MDP1XDRS7WMRWDtfQVCXceEk7KnoQAAAABJRU5ErkJggg==");
   position: absolute;
   z-index: 2;
   width: 16px;
@@ -102,47 +92,51 @@
   height: 18px;
   margin-left: 11px;
   background-repeat: no-repeat;
-  background-position: 0% 0%;
+  background-position: 0 0;
+  //Instead of the line below you could use @include background-origin($origin)
   background-origin: padding-box;
   background-color: transparent;
+  //Instead of the line below you could use @include background-clip($clip)
   background-clip: padding-box;
 }
 
-input[type="date"]::-webkit-inner-spin-button,
+input[type="date"]::-webkit-inner-spin-button {
+  display: none;
+}
+
 input[type="date"]::-webkit-calendar-picker-indicator {
   display: none;
-  -webkit-appearance: none;
 }
 
 .toggle-style {
-  background: rgba(255, 255, 255, 1) 0% 0% no-repeat padding-box;
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.06);
+  background: $white 0 0 no-repeat padding-box;
+  //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+  box-shadow: 0 1px 1px $black_6;
+  //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
   border-radius: 6px;
-
   position: relative;
   width: 100%;
   padding-right: 10px;
   padding-left: 10px;
-
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   align-content: center;
   justify-content: space-evenly;
   align-items: center;
-}
 
-.toggle-style .active {
-  background: rgba(89, 143, 177, 1) 0% 0% no-repeat padding-box;
-  border-radius: 7px;
+  .active {
+    background: $color_hippie_blue_approx 0 0 no-repeat padding-box;
+    //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+    border-radius: 7px;
+    padding: 5px 8px;
+  }
 
-  padding: 5px 8px;
-}
-
-.toggle-style button {
-  border: 0px solid transparent;
-  outline: 0px solid transparent;
-  padding: 0px;
+  button {
+    border: 0 solid transparent;
+    outline: 0 solid transparent;
+    padding: 0;
+  }
 }
 
 .list-layout-style {
@@ -150,18 +144,19 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 .individual-load-detail {
-  background: white 0% 0% no-repeat padding-box;
-  box-shadow: 0px 2px 1px rgb(0 0 0 / 6%);
-  padding: 17px 17px;
-  border-bottom: 2px solid rgba(239, 239, 239, 1);
-}
+  background: $white 0 0 no-repeat padding-box;
+  //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+  box-shadow: 0 2px 1px rgb(0 0 0 / 6%);
+  padding: 17px;
+  border-bottom: 2px solid $gallery_100;
 
-.individual-load-detail .row.early-details {
-  flex-wrap: nowrap;
-  flex-direction: row;
-  align-content: center;
-  justify-content: space-between;
-  align-items: flex-start;
+  .row.early-details {
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
 }
 
 .load-name-style {
@@ -169,43 +164,39 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   font-weight: 300;
   font-size: 12px;
   line-height: 24px;
-  letter-spacing: 0px;
-  color: rgba(134, 152, 173, 1);
+  letter-spacing: 0;
+  color: $color_bali_hai_approx;
 }
-
 
 .load-weight-style {
   text-align: left;
   font-weight: 600;
   font-size: 18px;
   line-height: 21px;
-  letter-spacing: 0px;
-  color: rgba(17, 17, 17, 1);
+  letter-spacing: 0;
+  color: $color_cod_gray_approx;
 }
-
 
 .load-bids-btn {
-  background: transparent linear-gradient(242deg, rgba(118, 184, 226, 1) 0%, rgba(89, 143, 177, 1) 100%) 0% 0% no-repeat padding-box;
+  background: transparent linear-gradient(242deg, $color_seagull_approx 0, $color_hippie_blue_approx 100%) 0 0 no-repeat padding-box;
+  //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
   border-radius: 8px;
-  outline: 0px;
-  border: 0px;
-  color: #FFFFFF;
+  outline: 0;
+  border: 0;
+  color: $white;
 
+  &:focus {
+    background: transparent linear-gradient(242deg, $color_seagull_approx 0, $color_hippie_blue_approx 100%) 0 0 no-repeat padding-box;
+    //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+    border-radius: 8px;
+    outline: 0;
+    border: 0;
+    color: $color_barley_white_approx;
+  }
 }
-
-.load-bids-btn:focus {
-  background: transparent linear-gradient(242deg, rgba(118, 184, 226, 1) 0%, rgba(89, 143, 177, 1) 100%) 0% 0% no-repeat padding-box;
-  border-radius: 8px;
-  outline: 0px;
-  border: 0px;
-  color: #fff3cd;
-
-}
-
 
 .straight-bordering {
-
-  border-left: 1px dashed #8698ad;
+  border-left: 1px dashed $color_bali_hai_approx;
   height: 23px;
   width: 1px;
   display: block;
@@ -213,28 +204,25 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   margin-left: 8px;
 }
 
-
 .address-styling {
   text-align: left;
   font-weight: 400;
   font-size: 12px;
   line-height: 16px;
   margin-left: 15px;
-  letter-spacing: 0px;
-  color: rgba(17, 17, 17, 1)
+  letter-spacing: 0;
+  color: $color_cod_gray_approx;
 }
 
-
 .lowest-bid-style {
-  background: rgba(217, 235, 246, 1) 0% 0% no-repeat padding-box;
+  background: $color_link_water_approx 0 0 no-repeat padding-box;
+  //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
   border-radius: 17px;
-
   text-align: left;
   font-size: 12px;
   line-height: 18px;
   letter-spacing: -0.24px;
-  color: rgba(91, 146, 181, 1);
-
+  color: $color_hippie_blue_approx;
   width: 100%;
   padding: 7.5px 15px;
   display: flex;
@@ -243,40 +231,40 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   align-content: center;
   align-items: center;
   justify-content: space-between;
-}
 
-.lowest-bid-style .bolder {
-  font-weight: 600;
+  .bolder {
+    font-weight: 600;
+  }
 }
 
 .bid-status {
   font-weight: 400;
   font-size: 10px;
   line-height: 12px;
-  letter-spacing: 0px;
-  color: rgba(89, 143, 177, 1);
+  letter-spacing: 0;
+  color: $color_hippie_blue_approx;
+  //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
   border-radius: 17px;
   padding: 6px 15px;
   vertical-align: super;
-}
 
-.bid-status.open {
-  background-color: rgba(217, 235, 246, 1);
-  color: rgba(89, 143, 177, 1);
-}
+  &.open {
+    background-color: $color_link_water_approx;
+    color: $color_hippie_blue_approx;
+  }
 
-
-.bid-status.closed {
-  background-color: rgba(217, 30, 24, 1);
-  color: rgba(255, 255, 255, 1);
+  &.closed {
+    background-color: $color_thunderbird_approx;
+    color: $white;
+  }
 }
 
 .time-left-heading {
   text-align: left;
   font-size: 10px;
   line-height: 24px;
-  letter-spacing: 0px;
-  color: rgba(134, 152, 173, 1);
+  letter-spacing: 0;
+  color: $color_bali_hai_approx;
   margin-bottom: 0;
 }
 
@@ -284,22 +272,20 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   text-align: left;
   font-size: 10px;
   line-height: 24px;
-  letter-spacing: 0px;
+  letter-spacing: 0;
   margin-bottom: 0;
-  color: rgba(0, 0, 0, 1);
+  color: $black_100;
 }
 
 .individual-progress-detail {
   padding: 17px 14px;
-  background: rgba(255, 255, 255, 1) 0% 0% no-repeat padding-box;
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.06);
+  background: $white 0 0 no-repeat padding-box;
+  //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+  box-shadow: 0 1px 1px $black_6;
+  //Instead of the line below you could use @include border-bottom-left-radius($radius)
   border-bottom-left-radius: 12px;
+  //Instead of the line below you could use @include border-bottom-right-radius($radius)
   border-bottom-right-radius: 12px;
-
-
-}
-
-.individual-progress-detail {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -317,48 +303,95 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 .search-result {
-  background: #FFFFFF;
+  background: $white;
   padding: 20px 15px;
-
-
   max-height: 200px;
   overflow-y: scroll;
   position: absolute;
   width: 96%;
   z-index: 8;
-  border: 1px solid #EEE;
+  border: 1px solid $color_gallery_approx;
+  //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
   border-radius: 4px;
   display: none;
+
+  &.opened {
+    display: block;
+  }
+
+  .search-category {
+    background: $white;
+  }
+
+  ul.search-category {
+    //padding-left: 0;
+    li {
+      list-style: none;
+      font-size: 12px;
+
+      a {
+        text-decoration: none;
+        font-size: 12px;
+      }
+    }
+  }
 }
 
-.search-result.opened
-{
-  display: block;
+.category-name-style {
+  font-size: 14px;
 }
 
-.search-result .search-category {
-  background: #FFFFFF;
+.sorting-icon {
+  &.down {
+    width: 9px;
+    height: 5px;
 
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    //Instead of the line below you could use @include background-origin($origin)
+    background-origin: padding-box;
+    background-color: transparent;
+    //Instead of the line below you could use @include background-clip($clip)
+    background-clip: padding-box;
+    display: inline-block;
+    background-image: url('../images/sorting-icon-down.svg');
+  }
+
+  &.up {
+    width: 9px;
+    height: 5px;
+
+    background-image: url('../images/sorting-icon-down.svg');
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    //Instead of the line below you could use @include background-origin($origin)
+    background-origin: padding-box;
+    display: inline-block;
+    background-image: url('../images/sorting-icon-down.svg');
+    background-color: transparent;
+    //Instead of the line below you could use @include background-clip($clip)
+    background-clip: padding-box;
+    //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+    transform: rotateX(180deg);
+  }
 }
 
-.search-result ul.search-category {
-  //padding-left: 0;
+.tabular-view thead.layout-heading-style {
+  text-align: left;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 21px;
+  letter-spacing: 0;
+  cursor: pointer;
+  color: $color_cod_gray_approx;
+  opacity: 1;
 }
 
-.search-result ul.search-category li {
-  list-style: none;
-  font-size: 12px;
+.tabular-view tbody .generic-text-style {
+  text-align: left;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 20px;
+  letter-spacing: 0px;
+  color: rgba(17, 17, 17, 1);
 }
-
-
-.search-result ul.search-category li a {
-  text-decoration: none;
-  font-size: 12px;
-}
-
-.category-name-style
-{
-font-size: 14px;
-}
-
-

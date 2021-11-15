@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard Pages Layout</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"
+          integrity="sha512-0S+nbAYis87iX26mmj/+fWt1MmaKCv80H+Mbo+Ne7ES4I6rxswpfnC6PxmLiw33Ywj2ghbtTw0FkLbMWqh4F7Q=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css"
+          integrity="sha512-aOG0c6nPNzGk+5zjwyJaoRUgCdOrfSDhmMID2u4+OIslr0GjpLKo7Xm0Ao3xmpM4T8AmIouRkqwj1nrdVsLKEQ=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap"
+          rel="stylesheet">
+
+
+</head>
+<body>
+
+<!--Header Code-->
+<header>
+
+</header>
+
+
+<!--Sidebar Section-->
+<aside>
+    <div class="left-bar-section clearfix">
+        <div class="clearfix image-location-styling">
+            <img src="images/logo-white.svg" alt="Loadistic Logo">
+        </div>
+
+        <div class="row mt-35">
+            <div class="center-everything">
+                <img class="client-current-logo" src="images/gul-ahmed.png" alt="Client Logo">
+
+            </div>
+        </div>
+
+        <div class="row mt-15">
+            <div class="center-everything">
+                <select class="client-designing-dd">
+                    <option value="00"> Gul Ahmed</option>
+                    <option value="01"> ALkaram</option>
+                    <option value="02"> Khadi</option>
+                </select>
+
+            </div>
+        </div>
+
+
+        <div class="mt-30 menu-ordering-list">
+            <ul class="scrollY">
+                <li class="menu-ordering-individual-list">
+                    <a href="#"><span class="icon-sidebar category"></span>Loads</a>
+                </li>
+
+
+            </ul>
+        </div>
+
+        <div class="mt-175 clearfix footer-ordering-list">
+            <ul class="">
+                <li class="footer-ordering-individual-list">
+                    <a href="javascript:void(0)"><i class="far fa-bell footing-icon-individual-list ">
+                        <span class="is-active"></span>
+                    </i> Notification</a>
+                </li>
+
+                <li class="footer-ordering-individual-list">
+                    <a href="javascript:void(0)"><i class="fas fa-headset footing-icon-individual-list"></i>Support</a>
+                </li>
+
+                <li class="footer-ordering-individual-list">
+                    <a href="javascript:void(0)"><i class="fas fa-cog footing-icon-individual-list"></i>Settings</a>
+                </li>
+
+            </ul>
+        </div>
+
+        <div class="mt-20 clearfix">
+            <span class="footing-progress"></span>
+        </div>
+
+        <div class="mt-20 clearfix ">
+            <span class="copyright-sidebar-design"> &#169; All rights Reserved Loadistic</span>
+        </div>
+
+
+    </div>
+</aside>
+
+<!--Main Section Body-->
+<section id="content" class="content-section-styling">
+
+    <!--    Heading Section-->
+    <div class="heading-section clearfix">
+        <div class="float-left">
+            <div class="float-left"><span class="page-heading-style">Loads</span></div>
+            <div class="float-left page-tabber ml-20">
+                <div class="page-tab-design">
+                    <span class="active">All</span>
+                    <span>Open</span>
+                    <span>Closed</span>
+                </div>
+
+            </div>
+        </div>
+        <div class="float-right">
+            <button class="btn-styling blue"> + Create Load</button>
+        </div>
+    </div>
+    <!--    Search and Filter All Shit-->
+    <div class="row mt-20">
+        <div class="col-md-8 col-sm-12">
+            <div class="clearfix search-filter-utility">
+                <span class=" form-control-feedback"></span>
+                <input onblur="SearchBarBlurred()"
+                       onfocus="SearchBarFocused()"
+                       type="text" class="search-bar-design" placeholder="Search">
+            </div>
+            <div class="search-result scrollY lighter">
+                <div class="clearfix">
+                    <span class="font-weight-bold category-name-style">Bidder Location</span>
+                    <ul class="search-category">
+                        <li>
+                            <a href="#">DHA Phase VIII</a></li>
+                        <li>
+                            <a href="#">DHA Phase VII</a></li>
+                        <li>
+                            <a href="#">DHA Phase VI</a></li>
+                    </ul>
+                </div>
+
+                <div class="clearfix">
+                    <span class="font-weight-bold">Bidder Name</span>
+                    <ul class="search-category">
+                        <li>
+                            <a href="#">Ehmad Zubair</a></li>
+                        <li>
+                            <a href="#">Sher Ali</a></li>
+                        <li>
+                            <a href="#">Ahmad Buksh</a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+        </div>
+        <div class="col-sm-6 col-md-2">
+            <span class=" filter-control-feedback"></span>
+            <input id="datepicker" type="text" placeholder="Select Date" class="filter-date-type">
+        </div>
+        <div class="col-sm-6 col-md-1 toggle-style">
+            <button class="grid-layout-style active">
+                <img src="images/grid-active.svg" alt="Grid Active Icon">
+            </button>
+            <button class="list-layout-style">
+                <img src="images/list-non-active.svg" alt="List NonActive Icon">
+            </button>
+        </div>
+    </div>
+
+
+    <!--    Listing Load Details-->
+    <div class="tabular-view clearfix table-responsive-sm table-responsive-md">
+        <table class="table table-borderless">
+            <thead class="layout-heading-style">
+            <tr>
+                <th scope="col">Load ID</th>
+                <th scope="col">Weight(in tons) <span class="sorting sorting-icon down"></span></th>
+                <th scope="col">POL <span></span> POD</th>
+                <th scope="col">Bidding End</th>
+                <th scope="col">Bidding End</th>
+                <th scope="col">No of Bids <span class="sorting sorting-icon up"></span></th>
+                <th scope="col">Status</th>
+                <th scope="col">No of Bids</th>
+                <th scope="col">Action</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td class="generic-text-style" scope="">Load 121331</td>
+                <td class="generic-text-style">30</td>
+                <td class="generic-text-style">Khi <span></span> Lhr</td>
+                <td class=""></td>
+                <td class="">63</td>
+                <td class="status-pill"></td>
+                <td class="action-side"></td>
+            </tr>
+
+            </tbody>
+        </table>
+    </div>
+
+</section>
+
+
+<!--Footer Code-->
+<footer>
+
+</footer>
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"
+        integrity="sha512-uto9mlQzrs59VwILcLiRYeLKPPbS/bT71da/OEBYEwcdNUk8jYIy+D176RYoop1Da+f9mvkYrmj5MCLZWEtQuA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="js/bootstrap.js"></script>
+
+<script src="js/site.js">
+
+</script>
+
+
+</body>
+</html>
