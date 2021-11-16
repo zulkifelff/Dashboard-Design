@@ -2,7 +2,6 @@
 @import "variable";
 //colors
 
-
 .page-heading-style {
   text-align: left;
   font-weight: 700;
@@ -345,7 +344,6 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   &.down {
     width: 9px;
     height: 5px;
-
     background-repeat: no-repeat;
     background-position: 0 0;
     //Instead of the line below you could use @include background-origin($origin)
@@ -360,8 +358,6 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   &.up {
     width: 9px;
     height: 5px;
-
-    background-image: url('../images/sorting-icon-down.svg');
     background-repeat: no-repeat;
     background-position: 0 0;
     //Instead of the line below you could use @include background-origin($origin)
@@ -389,9 +385,161 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 
 .tabular-view tbody .generic-text-style {
   text-align: left;
-  font-weight: 400;
+  font-weight: 500;
   font-size: 13px;
   line-height: 20px;
   letter-spacing: 0px;
   color: rgba(17, 17, 17, 1);
+}
+
+
+.bordered-gap.horizantal {
+  border-top: 1px dashed #8698AD;
+  width: 50px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+
+.bids-count-styling {
+  text-align: left;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 20px;
+  letter-spacing: 0px;
+  color: #598FB1;
+}
+
+
+.internal-pill.open {
+  padding: 3px 10px;
+  color: $white;
+  border-radius: 15px;
+  background: $color_hippie_blue_approx 0% 0% no-repeat padding-box;
+
+  font-size: 10px;
+  line-height: 16px;
+  letter-spacing: 0px;
+}
+
+.internal-pill.closed {
+  padding: 3px 10px;
+  color: $white;
+  border-radius: 15px;
+  background: $color_thunderbird_approx 0% 0% no-repeat padding-box;
+
+  font-size: 10px;
+  line-height: 16px;
+  letter-spacing: 0px;
+}
+
+
+
+.load-pill.open {
+  background-color: $color_seagull_approx;
+  border-radius: 15px;
+
+  padding: 0 0;
+  vertical-align: middle;
+  display: flex;
+  align-content: center;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.load-pill.closed {
+  background-color: $color_newyorkpink_approx;
+  border-radius: 15px;
+
+  padding: 0 0;
+  vertical-align: middle;
+  display: flex;
+  align-content: center;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+
+
+
+
+.each-table-row-load:hover .deletion-icon-style:active::before, .each-table-row-load:hover .deletion-icon-style:active::before {
+  content: "\f2ed";
+  font-family: "Font Awesome 5 Free";
+  color: rgba(223, 69, 69, 1);
+  padding: 10px 10px;
+  background-color: $color_newyorkpink_approx;
+
+  padding: 8px 10px;
+  border-radius: 50%;
+  font-size: 14px;
+  cursor: pointer;
+    opacity: 1;
+}
+
+.each-table-row-load:hover .deletion-icon-style::before {
+  content: "\f2ed";
+  opacity: 1;
+  color: rgba(134, 152, 173, 1);
+  font-family: "Font Awesome 5 Free";
+  border-radius: 50%;
+
+
+  padding: 8px 10px;
+  font-size: 14px;
+  cursor: pointer;
+
+}
+
+.each-table-row-load .deletion-icon-style::before {
+  content: "\f2ed";
+  opacity: 1;
+  color: rgba(134, 152, 173, 1);
+  font-family: "Font Awesome 5 Free";
+  border-radius: 50%;
+
+
+  padding: 8px 10px;
+  font-size: 14px;
+  cursor: pointer;
+  opacity: 0;
+
+}
+
+.each-table-row-load:hover .deletion-icon-style::before {
+  background-color: rgb(232, 232, 232);
+}
+
+.each-table-row-load td {
+  padding: 15px 12px;
+
+
+}
+
+tr.each-table-row-load {
+  background-repeat: no-repeat;
+  background-position: 0% 0%;
+  background-origin: padding-box;
+  background-clip: padding-box;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.06);
+  border-radius: 12px;
+  padding: 10px 0px;
+}
+
+tr.each-table-row-load {
+  background-color: rgba(255, 255, 255, 1);
+    margin-bottom: 15px;
+
+}
+
+
+.tabular-view .table
+{
+  border-collapse: inherit;
+    border-spacing: 0em;
+    border-spacing: 0 15px;
 }

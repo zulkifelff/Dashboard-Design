@@ -17,7 +17,7 @@ div[role="progressbar"] {
     animation: growProgressBar 3s 1 forwards;
     width: var(--size);
     height: var(--size);
-    border-radius: 50%;
+    border-radius: 49%;
     display: grid;
     place-items: center;
     background: radial-gradient(closest-side, white 71%, transparent 0 100%, white 0), conic-gradient(var(--fg) calc(var(--pgPercentage) * 1%), var(--bg) 0);
