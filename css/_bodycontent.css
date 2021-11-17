@@ -1,13 +1,40 @@
-@import "progress-style";
-@import "variable";
-//colors
+@charset "UTF-8";
+@keyframes growProgressBar {
+  0%, 33% {
+    --pgPercentage: 0;
+  }
+  100% {
+    --pgPercentage: var(--value);
+  }
+}
+@property --pgPercentage {
+  syntax: "<number>";
+  inherits: false;
+  initial-value: 0;
+}
+div[role=progressbar] {
+  --size: 2rem;
+  --fg: rgba(224, 146, 0, 1);
+  --bg: rgba(213, 213, 213, 1);
+  --pgPercentage: var(--value);
+  animation: growProgressBar 3s 1 forwards;
+  width: var(--size);
+  height: var(--size);
+  border-radius: 49%;
+  display: grid;
+  place-items: center;
+  background: radial-gradient(closest-side, white 71%, transparent 0 100%, white 0), conic-gradient(var(--fg) calc(var(--pgPercentage) * 1%), var(--bg) 0);
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: calc(var(--size) / 2);
+  color: var(--fg);
+}
 
 .page-heading-style {
   text-align: left;
   font-weight: 700;
   font-size: 24px;
   letter-spacing: 0;
-  color: $color_cod_gray_approx;
+  color: #111111;
   line-height: 35px;
 }
 
@@ -19,12 +46,12 @@
   position: absolute;
   top: 0;
   right: 0;
-  background: $color_porcelain_approx 0 0 no-repeat padding-box;
+  background: #f8fafb 0 0 no-repeat padding-box;
 }
 
 .search-bar-design {
   height: 40px;
-  background: $white 0 0 no-repeat padding-box;
+  background: white 0 0 no-repeat padding-box;
   box-shadow: 0 1px 1px #0000000f;
   border-radius: 6px;
   border: 0 solid transparent;
@@ -34,8 +61,7 @@
   font-weight: 400;
   letter-spacing: 0;
   padding: 15px 40px;
-  //opacity: 0.48;
-  color: rgb(20, 13, 50, 1);
+  color: #140d32;
   width: 100%;
 }
 
@@ -48,10 +74,8 @@
   margin-left: 15px;
   background-repeat: no-repeat;
   background-position: 0 0;
-  //Instead of the line below you could use @include background-origin($origin)
   background-origin: padding-box;
   background-color: transparent;
-  //Instead of the line below you could use @include background-clip($clip)
   background-clip: padding-box;
   background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAARCAYAAADUryzEAAAABHNCSVQICAgIfAhkiAAAAWBJREFUOE/Fk+FRg0AQRnM0INCASQUhHYQGnKSC2IGxArECUwJWYGYsIJSAFYQKIDYAvo+5Y4AhcfwlMwy7e/u93btbzGz0+L6/9jxv1zTNmqW5Xc7wj9jvF56+xDgHoW+M+cCX8BtbgkLriDd8lrwX7C2MzOlagBWfMBckJCQcpjoDqvjSQlRg1gKCIBAxUtuI87F41KVy78ldkVsY7RnyicDzVOWJTrTVQlssy/LRhGGYqnJVVe7ArjXQxdEc0DyhMYb2RctE+1VpE3pdxwI0AF4BJP8G0KnesZ/VHzrY0/Ub57DQLTgn7g/ILZjOTUNF0UiA9loInCEKMhjVMYgbSMh7sbmZm8R2FkjOb0Hc9ZH3SfWHbhJl0MgGSIqpW0nrum5H1T4RsT22ZqXk9WyhvPuZLGTOn6gWdxNn8EVckFxzw1fjHA8AfZGGpecXmnvn23MTxL8KmOhgEBJEW/oBLiPQha2U6yYAAAAASUVORK5CYII=");
 }
@@ -61,10 +85,8 @@
 }
 
 .filter-date-type {
-  background: $white 0 0 no-repeat padding-box;
-  //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
-  box-shadow: 0 1px 1px rgb(0 0 0 / 6%);
-  //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+  background: white 0 0 no-repeat padding-box;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.06);
   border-radius: 6px;
   outline: 0;
   border: 0 solid transparent;
@@ -73,7 +95,7 @@
   line-height: 18px;
   height: 40px;
   letter-spacing: 0;
-  color: $color_haiti_approx;
+  color: #140d32;
   width: 100%;
   padding: 14px 0 12px 40px;
 }
@@ -88,26 +110,22 @@
   margin-left: 11px;
   background-repeat: no-repeat;
   background-position: 0 0;
-  //Instead of the line below you could use @include background-origin($origin)
   background-origin: padding-box;
   background-color: transparent;
-  //Instead of the line below you could use @include background-clip($clip)
   background-clip: padding-box;
 }
 
-input[type="date"]::-webkit-inner-spin-button {
+input[type=date]::-webkit-inner-spin-button {
   display: none;
 }
 
-input[type="date"]::-webkit-calendar-picker-indicator {
+input[type=date]::-webkit-calendar-picker-indicator {
   display: none;
 }
 
 .toggle-style {
-  background: $white 0 0 no-repeat padding-box;
-  //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
-  box-shadow: 0 1px 1px $black_6;
-  //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+  background: white 0 0 no-repeat padding-box;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.06);
   border-radius: 6px;
   position: relative;
   width: 100%;
@@ -119,20 +137,17 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   align-content: center;
   justify-content: space-evenly;
   align-items: center;
-
-  .active {
-    background: $color_hippie_blue_approx 0 0 no-repeat padding-box;
-    //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
-    border-radius: 7px;
-    padding: 5px 8px;
-  }
-
-  button {
-    border: 0 solid transparent;
-    outline: 0 solid transparent;
-    padding: 0;
-    background: transparent;
-  }
+}
+.toggle-style .active {
+  background: #598fb1 0 0 no-repeat padding-box;
+  border-radius: 7px;
+  padding: 5px 8px;
+}
+.toggle-style button {
+  border: 0 solid transparent;
+  outline: 0 solid transparent;
+  padding: 0;
+  background: transparent;
 }
 
 .list-layout-style {
@@ -140,19 +155,17 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 .individual-load-detail {
-  background: $white 0 0 no-repeat padding-box;
-  //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
-  box-shadow: 0 2px 1px rgb(0 0 0 / 6%);
+  background: white 0 0 no-repeat padding-box;
+  box-shadow: 0 2px 1px rgba(0, 0, 0, 0.06);
   padding: 17px;
-  border-bottom: 2px solid $gallery_100;
-
-  .row.early-details {
-    flex-wrap: nowrap;
-    flex-direction: row;
-    align-content: center;
-    justify-content: space-between;
-    align-items: flex-start;
-  }
+  border-bottom: 2px solid #efefef;
+}
+.individual-load-detail .row.early-details {
+  flex-wrap: nowrap;
+  flex-direction: row;
+  align-content: center;
+  justify-content: space-between;
+  align-items: flex-start;
 }
 
 .load-name-style {
@@ -161,7 +174,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   font-size: 12px;
   line-height: 24px;
   letter-spacing: 0;
-  color: $color_bali_hai_approx;
+  color: #8698ad;
 }
 
 .load-weight-style {
@@ -170,29 +183,26 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   font-size: 18px;
   line-height: 21px;
   letter-spacing: 0;
-  color: $color_cod_gray_approx;
+  color: #111111;
 }
 
 .load-bids-btn {
-  background: transparent linear-gradient(242deg, $color_seagull_approx 0, $color_hippie_blue_approx 100%) 0 0 no-repeat padding-box;
-  //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+  background: transparent linear-gradient(242deg, #76b8e2 0, #598fb1 100%) 0 0 no-repeat padding-box;
   border-radius: 8px;
   outline: 0;
   border: 0;
-  color: $white;
-
-  &:focus {
-    background: transparent linear-gradient(242deg, $color_seagull_approx 0, $color_hippie_blue_approx 100%) 0 0 no-repeat padding-box;
-    //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
-    border-radius: 8px;
-    outline: 0;
-    border: 0;
-    color: $color_barley_white_approx;
-  }
+  color: white;
+}
+.load-bids-btn:focus {
+  background: transparent linear-gradient(242deg, #76b8e2 0, #598fb1 100%) 0 0 no-repeat padding-box;
+  border-radius: 8px;
+  outline: 0;
+  border: 0;
+  color: #fff3cd;
 }
 
 .straight-bordering {
-  border-left: 1px dashed $color_bali_hai_approx;
+  border-left: 1px dashed #8698ad;
   height: 23px;
   width: 1px;
   display: block;
@@ -207,18 +217,17 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   line-height: 16px;
   margin-left: 15px;
   letter-spacing: 0;
-  color: $color_cod_gray_approx;
+  color: #111111;
 }
 
 .lowest-bid-style {
-  background: $color_link_water_approx 0 0 no-repeat padding-box;
-  //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+  background: #d9ebf6 0 0 no-repeat padding-box;
   border-radius: 17px;
   text-align: left;
   font-size: 12px;
   line-height: 18px;
   letter-spacing: -0.24px;
-  color: $color_hippie_blue_approx;
+  color: #598fb1;
   width: 100%;
   padding: 7.5px 15px;
   display: flex;
@@ -227,10 +236,9 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   align-content: center;
   align-items: center;
   justify-content: space-between;
-
-  .bolder {
-    font-weight: 600;
-  }
+}
+.lowest-bid-style .bolder {
+  font-weight: 600;
 }
 
 .bid-status {
@@ -238,21 +246,18 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   font-size: 10px;
   line-height: 12px;
   letter-spacing: 0;
-  color: $color_hippie_blue_approx;
-  //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+  color: #598fb1;
   border-radius: 17px;
   padding: 6px 15px;
   vertical-align: super;
-
-  &.open {
-    background-color: $color_link_water_approx;
-    color: $color_hippie_blue_approx;
-  }
-
-  &.closed {
-    background-color: $color_thunderbird_approx;
-    color: $white;
-  }
+}
+.bid-status.open {
+  background-color: #d9ebf6;
+  color: #598fb1;
+}
+.bid-status.closed {
+  background-color: #d91e18;
+  color: white;
 }
 
 .time-left-heading {
@@ -260,7 +265,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   font-size: 10px;
   line-height: 24px;
   letter-spacing: 0;
-  color: $color_bali_hai_approx;
+  color: #8698ad;
   margin-bottom: 0;
 }
 
@@ -270,17 +275,14 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   line-height: 24px;
   letter-spacing: 0;
   margin-bottom: 0;
-  color: $black_100;
+  color: black;
 }
 
 .individual-progress-detail {
   padding: 17px 14px;
-  background: $white 0 0 no-repeat padding-box;
-  //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
-  box-shadow: 0 1px 1px $black_6;
-  //Instead of the line below you could use @include border-bottom-left-radius($radius)
+  background: white 0 0 no-repeat padding-box;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.06);
   border-bottom-left-radius: 12px;
-  //Instead of the line below you could use @include border-bottom-right-radius($radius)
   border-bottom-right-radius: 12px;
   display: flex;
   flex-direction: row;
@@ -299,72 +301,58 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 .search-result {
-  background: $white;
+  background: white;
   padding: 20px 15px;
   max-height: 200px;
   overflow-y: scroll;
   position: absolute;
   width: 96%;
   z-index: 8;
-  border: 1px solid $color_gallery_approx;
-  //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+  border: 1px solid #eeeeee;
   border-radius: 4px;
   display: none;
-
-  &.opened {
-    display: block;
-  }
-
-  .search-category {
-    background: $white;
-  }
-
-  ul.search-category {
-    //padding-left: 0;
-    li {
-      list-style: none;
-      font-size: 12px;
-
-      a {
-        text-decoration: none;
-        font-size: 12px;
-      }
-    }
-  }
+}
+.search-result.opened {
+  display: block;
+}
+.search-result .search-category {
+  background: white;
+}
+.search-result ul.search-category li {
+  list-style: none;
+  font-size: 12px;
+}
+.search-result ul.search-category li a {
+  text-decoration: none;
+  font-size: 12px;
 }
 
 .category-name-style {
   font-size: 14px;
 }
 
-.sorting-icon {
-  &.down {
-    width: 9px;
-    height: 5px;
-    background-repeat: no-repeat;
-    background-position: 0 0;
-    //Instead of the line below you could use @include background-origin($origin)
-    background-origin: padding-box;
-    background-color: transparent;
-    //Instead of the line below you could use @include background-clip($clip)
-    background-clip: padding-box;
-    display: inline-block;
-    background-image: url('../images/sorting-icon-down.svg');
-  }
-
-  &.up {
-    width: 9px;
-    height: 5px;
-    background-repeat: no-repeat;
-    background-position: 0 0;
-    //Instead of the line below you could use @include background-origin($origin)
-    background-origin: padding-box;
-    display: inline-block;
-    background-image: url('../images/sorting-icon-down.svg');
-    background-color: transparent;
-    background-clip: padding-box;
-    transform: rotateX(180deg);
-  }
+.sorting-icon.down {
+  width: 9px;
+  height: 5px;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-origin: padding-box;
+  background-color: transparent;
+  background-clip: padding-box;
+  display: inline-block;
+  background-image: url("../images/sorting-icon-down.svg");
+}
+.sorting-icon.up {
+  width: 9px;
+  height: 5px;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-origin: padding-box;
+  display: inline-block;
+  background-image: url("../images/sorting-icon-down.svg");
+  background-color: transparent;
+  background-clip: padding-box;
+  transform: rotateX(180deg);
 }
 
 .tabular-view thead.layout-heading-style {
@@ -374,7 +362,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   line-height: 21px;
   letter-spacing: 0;
   cursor: pointer;
-  color: $color_cod_gray_approx;
+  color: #111111;
   opacity: 1;
 }
 
@@ -384,9 +372,8 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   font-size: 13px;
   line-height: 20px;
   letter-spacing: 0px;
-  color: rgba(17, 17, 17, 1);
+  color: #111111;
 }
-
 
 .bordered-gap.horizantal {
   border-top: 1px dashed #8698AD;
@@ -397,7 +384,6 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   margin-right: 5px;
 }
 
-
 .bids-count-styling {
   text-align: left;
   font-weight: 600;
@@ -407,13 +393,11 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   color: #598FB1;
 }
 
-
 .internal-pill.open {
   padding: 3px 10px;
-  color: $white;
+  color: white;
   border-radius: 15px;
-  background: $color_hippie_blue_approx 0% 0% no-repeat padding-box;
-
+  background: #598fb1 0% 0% no-repeat padding-box;
   font-size: 10px;
   line-height: 16px;
   letter-spacing: 0px;
@@ -421,21 +405,17 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 
 .internal-pill.closed {
   padding: 3px 10px;
-  color: $white;
+  color: white;
   border-radius: 15px;
-  background: rgba(220, 220, 220, 1) 0% 0% no-repeat padding-box;
-
+  background: gainsboro 0% 0% no-repeat padding-box;
   font-size: 10px;
   line-height: 16px;
   letter-spacing: 0px;
 }
 
-
-
 .load-pill.open {
-  background-color: $color_seagull_approx;
+  background-color: #76b8e2;
   border-radius: 15px;
-
   padding: 0 0;
   vertical-align: middle;
   display: flex;
@@ -446,9 +426,8 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 .load-pill.closed {
-  background-color: rgba(159, 159, 159, 1);
+  background-color: #9f9f9f;
   border-radius: 15px;
-
   padding: 0 0;
   vertical-align: middle;
   display: flex;
@@ -458,61 +437,48 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   align-items: center;
 }
 
-
-
-
-
 .each-table-row-load:hover .deletion-icon-style:active::before, .each-table-row-load:hover .deletion-icon-style:active::before {
-  content: "\f2ed";
+  content: "";
   font-family: "Font Awesome 5 Free";
-  color: rgba(223, 69, 69, 1);
+  color: #df4545;
   padding: 10px 10px;
-  background-color: $color_newyorkpink_approx;
-
+  background-color: #e08283;
   padding: 8px 10px;
   border-radius: 50%;
   font-size: 14px;
   cursor: pointer;
-    opacity: 1;
+  opacity: 1;
 }
 
 .each-table-row-load:hover .deletion-icon-style::before {
-  content: "\f2ed";
+  content: "";
   opacity: 1;
-  color: rgba(134, 152, 173, 1);
+  color: #8698ad;
   font-family: "Font Awesome 5 Free";
   border-radius: 50%;
-
-
   padding: 8px 10px;
   font-size: 14px;
   cursor: pointer;
-
 }
 
 .each-table-row-load .deletion-icon-style::before {
-  content: "\f2ed";
+  content: "";
   opacity: 1;
-  color: rgba(134, 152, 173, 1);
+  color: #8698ad;
   font-family: "Font Awesome 5 Free";
   border-radius: 50%;
-
-
   padding: 8px 10px;
   font-size: 14px;
   cursor: pointer;
   opacity: 0;
-
 }
 
 .each-table-row-load:hover .deletion-icon-style::before {
-  background-color: rgb(232, 232, 232);
+  background-color: #e8e8e8;
 }
 
 .each-table-row-load td {
   padding: 15px 12px;
-
-
 }
 
 tr.each-table-row-load {
@@ -526,57 +492,48 @@ tr.each-table-row-load {
 }
 
 tr.each-table-row-load {
-  background-color: rgba(255, 255, 255, 1);
-    margin-bottom: 15px;
-
+  background-color: white;
+  margin-bottom: 15px;
 }
 
-
-.tabular-view .table
-{
+.tabular-view .table {
   border-collapse: inherit;
-    border-spacing: 0em;
-    border-spacing: 0 15px;
+  border-spacing: 0em;
+  border-spacing: 0 15px;
 }
 
-.time-remaining-box
-{
-  background: $white 0% 0% no-repeat padding-box;
+.time-remaining-box {
+  background: white 0% 0% no-repeat padding-box;
   border-radius: 8px;
 }
 
-.time-remaining-box
-{
+.time-remaining-box {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.06);
 }
 
-
-.awarded-style
-{
-      text-align: left;
-    font-size: 10px;
-    line-height: 14px;
-    letter-spacing: 0px;
-    color: #8698ad;
-    clear: both;
-    display: block;
+.awarded-style {
+  text-align: left;
+  font-size: 10px;
+  line-height: 14px;
+  letter-spacing: 0px;
+  color: #8698ad;
+  clear: both;
+  display: block;
 }
-.star-awarded
-{
+
+.star-awarded {
   background-repeat: no-repeat;
   background-origin: padding-box;
   background-color: transparent;
   background-position: 0% 0%;
-    background-clip: padding-box;
+  background-clip: padding-box;
   display: inline-block;
-
 }
 
-
-
-.star-awarded
-{
-      background-image: url("../images/star-awarded.svg");
-    height: 33px;
-    width: 33px;
+.star-awarded {
+  background-image: url("../images/star-awarded.svg");
+  height: 33px;
+  width: 33px;
 }
+
+/*# sourceMappingURL=_bodycontent.css.map */
