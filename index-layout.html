@@ -9,6 +9,7 @@
           crossorigin="anonymous" referrerpolicy="no-referrer"/>
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/index.css">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css"
           integrity="sha512-aOG0c6nPNzGk+5zjwyJaoRUgCdOrfSDhmMID2u4+OIslr0GjpLKo7Xm0Ao3xmpM4T8AmIouRkqwj1nrdVsLKEQ=="
           crossorigin="anonymous" referrerpolicy="no-referrer"/>
@@ -152,12 +153,12 @@
             </div>
 
         </div>
-<!--        Filter Date-->
+        <!--        Filter Date-->
         <div class="col-sm-6 col-md-2">
             <span class=" filter-control-feedback"></span>
             <input id="datepicker" type="text" placeholder="Select Date" class="filter-date-type">
         </div>
-<!--        List Style-->
+        <!--        List Style-->
         <div class="col-sm-6 col-md-1 toggle-style">
             <button class="grid-layout-style ">
                 <img src="images/grid-non-active.svg" alt="Grid Active Icon">
@@ -180,7 +181,7 @@
                 <th scope="col">Bidding End</th>
                 <th scope="col">No of Bids <span class="sorting sorting-icon up"></span></th>
                 <th scope="col" colspan="2">Status</th>
-<!--                <th scope="col">Action</th>-->
+                <!--                <th scope="col">Action</th>-->
             </tr>
             </thead>
             <tbody>
@@ -189,13 +190,13 @@
                 <td class="generic-text-style">30</td>
                 <td class="generic-text-style">Khi <span class="bordered-gap horizantal"></span> Lhr</td>
                 <td class=" generic-text-style ">
-                     <div role="progressbar"
+                    <div role="progressbar"
                          aria-valuenow="69"
                          aria-valuemin="0"
                          aria-valuemax="100"
                          style="--value:25;--size: 1.5rem;display: inline-block;vertical-align: middle;">
                     </div>
-                     1 Day 7 hrs
+                    1 Day 7 hrs
                 </td>
                 <td class="bids-count-styling">63</td>
                 <td class="status-pill"><span class="load-pill open">
@@ -213,19 +214,29 @@
                 <td class="generic-text-style">30</td>
                 <td class="generic-text-style">Khi <span class="bordered-gap horizantal"></span> Lhr</td>
                 <td class=" generic-text-style ">
-                     <div role="progressbar"
-                         aria-valuenow="69"
-                         aria-valuemin="0"
-                         aria-valuemax="100"
-                         style="--value:88;--size: 1.5rem;display: inline-block;vertical-align: middle;">
+<!--                    <div role="progressbar"-->
+<!--                         aria-valuenow="69"-->
+<!--                         aria-valuemin="0"-->
+<!--                         aria-valuemax="100"-->
+<!--                         style="&#45;&#45;value:88;&#45;&#45;size: 1.5rem;display: inline-block;vertical-align: middle;">-->
+<!--                    </div>-->
+                    <div class="float-left">
+                                            <span class="star-awarded"></span>
+
                     </div>
-                     1 Day 7 hrs
+
+                    <div class="float-left" style="margin-left: 5px">
+                        <span class="awarded-style">Awarded To</span>
+                    <span class="generic-text-style">Jawad</span>
+                    </div>
+
                 </td>
                 <td class="bids-count-styling">63</td>
 
                 </td>
 
-                <td class="status-pill"><span class="load-pill closed">
+                <td class="status-pill">
+                    <span class="load-pill closed">
                     <span class="internal-pill closed">Close
                     </span>
                 </span></td>
@@ -236,42 +247,18 @@
                     </span>
                 </td>
             </tr>
-             <tr class="each-table-row-load">
+            <tr class="each-table-row-load">
                 <td class="generic-text-style" scope="">Load 121331</td>
                 <td class="generic-text-style">30</td>
                 <td class="generic-text-style">Khi <span class="bordered-gap horizantal"></span> Lhr</td>
                 <td class=" generic-text-style ">
-                     <div role="progressbar"
+                    <div role="progressbar"
                          aria-valuenow="69"
                          aria-valuemin="0"
                          aria-valuemax="100"
                          style="--value:25;--size: 1.5rem;display: inline-block;vertical-align: middle;">
                     </div>
-                     1 Day 7 hrs
-                </td>
-                <td class="bids-count-styling">63</td>
-                <td class="status-pill"><span class="load-pill open">
-                    <span class="internal-pill open">Open
-                    </span>
-                </span></td>
-                <td class="action-side">
-                    <span class="deletion-icon-style">
-
-                    </span>
-                </td>
-            </tr>
-             <tr class="each-table-row-load">
-                <td class="generic-text-style" scope="">Load 121331</td>
-                <td class="generic-text-style">30</td>
-                <td class="generic-text-style">Khi <span class="bordered-gap horizantal"></span> Lhr</td>
-                <td class=" generic-text-style ">
-                     <div role="progressbar"
-                         aria-valuenow="69"
-                         aria-valuemin="0"
-                         aria-valuemax="100"
-                         style="--value:25;--size: 1.5rem;display: inline-block;vertical-align: middle;">
-                    </div>
-                     1 Day 7 hrs
+                    1 Day 7 hrs
                 </td>
                 <td class="bids-count-styling">63</td>
                 <td class="status-pill"><span class="load-pill open">
@@ -289,13 +276,37 @@
                 <td class="generic-text-style">30</td>
                 <td class="generic-text-style">Khi <span class="bordered-gap horizantal"></span> Lhr</td>
                 <td class=" generic-text-style ">
-                     <div role="progressbar"
+                    <div role="progressbar"
+                         aria-valuenow="69"
+                         aria-valuemin="0"
+                         aria-valuemax="100"
+                         style="--value:25;--size: 1.5rem;display: inline-block;vertical-align: middle;">
+                    </div>
+                    1 Day 7 hrs
+                </td>
+                <td class="bids-count-styling">63</td>
+                <td class="status-pill"><span class="load-pill open">
+                    <span class="internal-pill open">Open
+                    </span>
+                </span></td>
+                <td class="action-side">
+                    <span class="deletion-icon-style">
+
+                    </span>
+                </td>
+            </tr>
+            <tr class="each-table-row-load">
+                <td class="generic-text-style" scope="">Load 121331</td>
+                <td class="generic-text-style">30</td>
+                <td class="generic-text-style">Khi <span class="bordered-gap horizantal"></span> Lhr</td>
+                <td class=" generic-text-style ">
+                    <div role="progressbar"
                          aria-valuenow="69"
                          aria-valuemin="0"
                          aria-valuemax="100"
                          style="--value:88;--size: 1.5rem;display: inline-block;vertical-align: middle;">
                     </div>
-                     1 Day 7 hrs
+                    1 Day 7 hrs
                 </td>
                 <td class="bids-count-styling">63</td>
 

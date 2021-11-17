@@ -12,11 +12,9 @@
 }
 
 .content-section-styling {
-  //margin-top: 20px;
   width: calc(100% - 200px);
   padding: 20px 35px;
   min-height: 100vh;
-  //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
   transition: all 0.3s;
   position: absolute;
   top: 0;
@@ -27,9 +25,7 @@
 .search-bar-design {
   height: 40px;
   background: $white 0 0 no-repeat padding-box;
-  //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
   box-shadow: 0 1px 1px #0000000f;
-  //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
   border-radius: 6px;
   border: 0 solid transparent;
   outline: 0;
@@ -366,9 +362,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     display: inline-block;
     background-image: url('../images/sorting-icon-down.svg');
     background-color: transparent;
-    //Instead of the line below you could use @include background-clip($clip)
     background-clip: padding-box;
-    //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
     transform: rotateX(180deg);
   }
 }
@@ -429,7 +423,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   padding: 3px 10px;
   color: $white;
   border-radius: 15px;
-  background: $color_thunderbird_approx 0% 0% no-repeat padding-box;
+  background: rgba(220, 220, 220, 1) 0% 0% no-repeat padding-box;
 
   font-size: 10px;
   line-height: 16px;
@@ -452,7 +446,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 .load-pill.closed {
-  background-color: $color_newyorkpink_approx;
+  background-color: rgba(159, 159, 159, 1);
   border-radius: 15px;
 
   padding: 0 0;
@@ -460,7 +454,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   display: flex;
   align-content: center;
   flex-direction: row;
-  justify-content: flex-end;
+  justify-content: flex-start;
   align-items: center;
 }
 
@@ -543,4 +537,46 @@ tr.each-table-row-load {
   border-collapse: inherit;
     border-spacing: 0em;
     border-spacing: 0 15px;
+}
+
+.time-remaining-box
+{
+  background: $white 0% 0% no-repeat padding-box;
+  border-radius: 8px;
+}
+
+.time-remaining-box
+{
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.06);
+}
+
+
+.awarded-style
+{
+      text-align: left;
+    font-size: 10px;
+    line-height: 14px;
+    letter-spacing: 0px;
+    color: #8698ad;
+    clear: both;
+    display: block;
+}
+.star-awarded
+{
+  background-repeat: no-repeat;
+  background-origin: padding-box;
+  background-color: transparent;
+  background-position: 0% 0%;
+    background-clip: padding-box;
+  display: inline-block;
+
+}
+
+
+
+.star-awarded
+{
+      background-image: url("../images/star-awarded.svg");
+    height: 33px;
+    width: 33px;
 }
