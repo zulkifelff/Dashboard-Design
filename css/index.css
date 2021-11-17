@@ -695,6 +695,10 @@ tr.each-table-row-load {
   margin-bottom: 15px;
 }
 
+.each-media-stats {
+  margin-bottom: 30px;
+}
+
 body {
   height: 100%;
   width: 100%;
