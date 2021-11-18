@@ -699,6 +699,14 @@ tr.each-table-row-load {
   margin-bottom: 30px;
 }
 
+.delivery-date-style {
+  text-align: left;
+  font-size: 10px;
+  line-height: 24px;
+  letter-spacing: 0px;
+  color: #111111;
+}
+
 body {
   height: 100%;
   width: 100%;
