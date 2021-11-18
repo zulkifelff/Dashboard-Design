@@ -638,11 +638,11 @@ tr.each-table-row-load {
 .load-filter-select {
   background: #FFFFFF 0% 0% no-repeat padding-box;
   border-radius: 6px;
-  padding: 12px 18px;
+  padding: 11px 18px;
   text-align: left;
   font-weight: 500;
-  font-size: 12px;
-  line-height: 18px;
+  font-size: 11px;
+  line-height: 16px;
   letter-spacing: 0;
   outline: 0;
   border-top-width: 0;
@@ -664,4 +664,77 @@ tr.each-table-row-load {
 
 .search-bar-styling {
 
+}
+
+.bid-action.accept {
+  width: 32px;
+  height: 32px;
+  visibility: hidden;
+  display: inline-block;
+  transition: opacity 250ms ease-in;
+  cursor: pointer;
+  background: transparent url('../images/accept-bid.svg') 0% 0% no-repeat padding-box;
+}
+
+.each-table-row-load:hover .bid-action.accept {
+  visibility: visible;
+}
+
+.bid-action.reject {
+  width: 32px;
+  height: 32px;
+  visibility: hidden;
+  cursor: pointer;
+  display: inline-block;
+  transition: opacity 250ms ease-in;
+  margin-right: 4px;
+  background: transparent url('../images/discard-bid.svg') 0% 0% no-repeat padding-box;
+}
+
+.each-table-row-load:hover .bid-action.reject {
+  visibility: visible;
+}
+
+.load-chat-icon {
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  display: inline-block;
+
+  margin-right: 8px;
+  background: transparent url('../images/load-chat-icon.svg') 0% 0% no-repeat padding-box;
+}
+
+
+.incoming-chat-count {
+  width: 19px;
+  height: 19px;
+  background: #E55353 0% 0% no-repeat padding-box;
+  color: #FFF;
+  font-size: 9px;
+  padding: 1px 2px;
+  border-radius: 50%;
+  display: none;
+}
+
+.latest-message-style {
+  text-align: left;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: 0px;
+  color: #8698AD;
+}
+
+.value-style-stats.table-style {
+  font-size: 12px;
+  line-height: 22px;
+  clear: both;
+}
+
+.heading-style-stats.table-style {
+  font-size: 13px;
+  line-height: 19px;
+  clear: both;
+  display: block;
 }

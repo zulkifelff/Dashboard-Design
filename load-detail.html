@@ -123,7 +123,7 @@
 
     <div class="row no-gutters mt-30">
 
-<!--        LHS-->
+        <!--        LHS-->
         <div class="col-sm-12 col-md-3">
             <!--            Time Remaining Stat-->
             <div class="col-sm-12 col-md-12 no-gutters time-remaining-box">
@@ -158,21 +158,21 @@
                         <p class="value-style-stats mb-0">Rs. 1,000,000</p>
                     </div>
                 </div>
-                 <div class="media each-media-stats">
+                <div class="media each-media-stats">
                     <img class="align-self-start mr-3" src="images/weight-icon.svg" alt="Truck Icon">
                     <div class="media-body">
                         <h5 style="line-height: 20px;" class="mt-0 heading-style-stats mb-0">Weight</h5>
                         <p class="value-style-stats mb-0">30 Tons</p>
                     </div>
                 </div>
-                 <div class="media each-media-stats">
+                <div class="media each-media-stats">
                     <img class="align-self-start mr-3" src="images/truck-icon.svg" alt="Truck Icon">
                     <div class="media-body">
                         <h5 style="line-height: 20px;" class="mt-0 heading-style-stats mb-0">Truck Type</h5>
                         <p class="value-style-stats mb-0">60 Feets</p>
                     </div>
                 </div>
-                 <div class="media each-media-stats">
+                <div class="media each-media-stats">
                     <img class="align-self-start mr-3" src="images/pickup-point.svg" alt="Pickup Icon">
                     <div class="media-body">
                         <h5 style="line-height: 20px;" class="mt-0 heading-style-stats mb-0">Pick Up</h5>
@@ -180,7 +180,7 @@
                         <p class="delivery-date-style">on 26 Oct 2021 12:00 am</p>
                     </div>
                 </div>
-                 <div class="media each-media-stats">
+                <div class="media each-media-stats">
                     <img class="align-self-start mr-3" src="images/delivery-icon.svg" alt="Delivery Icon">
                     <div class="media-body">
                         <h5 style="line-height: 20px;" class="mt-0 heading-style-stats mb-0">Delivery</h5>
@@ -195,57 +195,86 @@
         </div>
 
 
-<!--        RHS-->
+        <!--        RHS-->
         <div class="col-sm-12 col-md-9">
             <div class="col-sm-12 col-md-12 no-gutters subheading-bar">
                 <h2 class="subheading-bar-style">Bids</h2>
             </div>
 
+            <!--            Filter Arena -->
             <div class="no-gutters col-sm-12 col-md-12">
-                <div class="col-lg-8">
+                <div class="col-8 float-left">
                     <div class="clearfix search-filter-utility">
                         <span class=" form-control-feedback"></span>
-                            <input onblur="SearchBarBlurred()" onfocus="SearchBarFocused()" type="text" class="search-bar-design" placeholder="Search">
+                        <input onblur="SearchBarBlurred()" onfocus="SearchBarFocused()" type="text"
+                               class="search-bar-design" placeholder="Search">
                     </div>
-                    <div class="search-result scrollY lighter">
-                        <div class="clearfix">
-                            <span class="font-weight-bold category-name-style">Bidder Location</span>
-                            <ul class="search-category">
-                                <li>
-                                    <a href="#">DHA Phase VIII</a></li>
-                                <li>
-                                    <a href="#">DHA Phase VII</a></li>
-                                <li>
-                                    <a href="#">DHA Phase VI</a></li>
-                            </ul>
-                        </div>
 
-                        <div class="clearfix">
-                            <span class="font-weight-bold">Bidder Name</span>
-                            <ul class="search-category">
-                                <li>
-                                    <a href="#">Ehmad Zubair</a></li>
-                                <li>
-                                    <a href="#">Sher Ali</a></li>
-                                <li>
-                                    <a href="#">Ahmad Buksh</a></li>
-                            </ul>
-                        </div>
-
-                    </div>
 
                 </div>
 
-                <div class="col-lg-4">
+                <div class="col-4 float-left padder-left-only">
 
-                        <select class="load-filter-select full-width">
-                            <option value="00">All</option>
-                        </select>
+                    <select class="load-filter-select full-width">
+                        <option value="00">All</option>
+                        <option value="01">Spot</option>
+                        <option value="02">Future</option>
+                    </select>
 
                 </div>
 
 
             </div>
+
+            <div class="no-gutters col-sm-12 col-md-12 table-arena">
+                <div class="tabular-view clearfix table-responsive-sm table-responsive-md">
+                    <table class="table table-borderless">
+                        <thead class="layout-heading-style">
+                        <tr>
+                            <th scope="col">Partner</th>
+                            <th scope="col">Last Activity <span class="sorting sorting-icon down"></span></th>
+                            <th scope="col">Bid Amount <span class="sorting sorting-icon down"></span></th>
+                            <th scope="col">Message</th>
+                            <th scope="col" colspan="3"></th>
+                            <!--                <th scope="col">Action</th>-->
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr class="each-table-row-load">
+                            <td class="generic-text-style" scope="">
+                                <span class="value-style-stats table-style">Ali Raza</span>
+                                <span class="heading-style-stats table-style">0333 1234567</span>
+                            </td>
+                            <td class=""><span class="value-style-stats table-style">Thu, 28 Jan</span><span class="heading-style-stats table-style">2:40pm</span></td>
+                            <td class="bids-count-styling">Rs. 400,000</td>
+                            <td class=" latest-message-style ">
+                                <span>
+                                    Bid Amount negotiable?
+                                    <br>
+                                    how it is...
+                                </span>
+                            </td>
+                            <td class="bids-count-styling">
+                                <span>
+                                    <span class="load-chat-icon">
+
+                                </span>
+
+                                     <span class="incoming-chat-count">10</span>
+                                </span>
+
+                                <span class="bid-action reject"></span>
+                                <span class="bid-action accept"></span>
+                            </td>
+
+                        </tr>
+
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
         </div>
     </div>
 
