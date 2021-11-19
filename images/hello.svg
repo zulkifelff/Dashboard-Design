@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="333.11" height="21.436" viewBox="0 0 333.11 21.436">
+  <g id="Group_1571" data-name="Group 1571" transform="translate(-575.282 -321.282)">
+    <line id="Line_177" data-name="Line 177" x1="139.5" transform="translate(670 332.359)" fill="none" stroke="#8698ad" stroke-width="1" stroke-dasharray="4"/>
+    <g id="Group_1560" data-name="Group 1560" transform="translate(280.43 -292.09)">
+      <g id="Location" transform="translate(537.298 613.372)">
+        <path id="Path_33958" d="M8.082-.75h.031a8.842,8.842,0,0,1,8.8,8.862V8.2s0,.01,0,.015c-.065,3.456-2.135,6.351-3.86,8.171l0,0a21.964,21.964,0,0,1-3.863,3.188,1.761,1.761,0,0,1-2.209,0,21.485,21.485,0,0,1-5.454-5.116A11.022,11.022,0,0,1-.75,8.109q0-.013,0-.027V8.055A8.833,8.833,0,0,1,8.082-.75Zm7.261,8.943V8.11A7.269,7.269,0,0,0,8.107.822H8.082A7.274,7.274,0,0,0,.822,8.058v.011A9.459,9.459,0,0,0,2.774,13.51l0,.007a19.921,19.921,0,0,0,5.094,4.77.786.786,0,0,1,.085.064.189.189,0,0,0,.247,0,.785.785,0,0,1,.088-.066A20.393,20.393,0,0,0,11.916,15.3C13.448,13.686,15.284,11.14,15.343,8.193Z" transform="translate(0.75 0.75)" fill="#598fb1"/>
+        <path id="Ellipse_740" d="M3.032-.75A3.782,3.782,0,1,1-.75,3.032,3.786,3.786,0,0,1,3.032-.75Zm0,5.8A2.015,2.015,0,1,0,1.017,3.032,2.017,2.017,0,0,0,3.032,5.047Z" transform="translate(5.801 6.012)" fill="#598fb1"/>
+      </g>
+    </g>
+    <g id="Group_1561" data-name="Group 1561" transform="translate(-239.109 182.861)">
+      <g id="Group_1538" data-name="Group 1538" transform="translate(814.391 139.139)" opacity="0.36">
+        <g id="Group_1535" data-name="Group 1535" transform="translate(0 0)">
+          <g id="Ellipse_154" data-name="Ellipse 154" fill="#598fb1" stroke="#598fb1" stroke-width="2">
+            <circle cx="10.359" cy="10.359" r="10.359" stroke="none"/>
+            <circle cx="10.359" cy="10.359" r="9.359" fill="none"/>
+          </g>
+        </g>
+      </g>
+      <g id="Group_1539" data-name="Group 1539" transform="translate(818.139 142.794)">
+        <g id="Group_1535-2" data-name="Group 1535" transform="translate(0 0)">
+          <g id="Ellipse_154-2" data-name="Ellipse 154" transform="translate(0)" fill="#598fb1" stroke="#598fb1" stroke-width="2">
+            <circle cx="6.655" cy="6.655" r="6.655" stroke="none"/>
+            <circle cx="6.655" cy="6.655" r="5.655" fill="none"/>
+          </g>
+        </g>
+      </g>
+    </g>
+    <text id="Pickup" transform="translate(611 337)" fill="#111" font-size="14" font-family="Poppins-SemiBold, Poppins" font-weight="600"><tspan x="0" y="0">Pickup</tspan></text>
+    <text id="Delivery" transform="translate(850.393 337)" fill="#111" font-size="14" font-family="Poppins-SemiBold, Poppins" font-weight="600"><tspan x="0" y="0">Delivery</tspan></text>
+  </g>
+</svg>

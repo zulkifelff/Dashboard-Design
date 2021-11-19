@@ -27,8 +27,7 @@
 <div class="container-fluid">
     <div class="row">
         <button data-toggle="modal" data-target="#chatPopup" class="btn btn-outline-primary">Chat Popup</button>
-        <button class="btn btn-primary">Order Delivery 1</button>
-        <button class="btn btn-warning">Order Delivery 2</button>
+        <button class="btn btn-primary" data-target="#loadPopup" data-toggle="modal">Create Load</button>
         <button class="btn btn-outline-warning">Profile</button>
     </div>
 </div>
@@ -88,10 +87,10 @@
                             </div>
                         </div>
 
-<!--                        All Messages Shit-->
+                        <!--                        All Messages Shit-->
                         <div class="clearfix chat-all-messages scrollY lighter mt-20">
 
-<!--                            Laurel ke Message-->
+                            <!--                            Laurel ke Message-->
                             <div class="individual-message incoming">
 
                                 <div class="individual-message-person">
@@ -103,14 +102,14 @@
                                 </div>
 
                                 <div class="individual-message-time">
-                                02 Aug 22 min ago
+                                    02 Aug 22 min ago
                                 </div>
 
                             </div>
 
 
-<!--                            Apnay Message-->
-                             <div class="individual-message outgoing">
+                            <!--                            Apnay Message-->
+                            <div class="individual-message outgoing">
 
                                 <div class="individual-message-person">
                                     <span>You</span>
@@ -121,26 +120,340 @@
                                 </div>
 
                                 <div class="individual-message-time">
-                                now
+                                    now
                                 </div>
 
                             </div>
 
                         </div>
 
-                            <!--                        Chat Box-->
-                            <div class="clearfix chat-type-section">
-                                <input maxlength="256" placeholder="Type Here" type="text" id="chat-input-bar">
-                                <span class="send-text-icon"></span>
-                            </div>
+                        <!--                        Chat Box-->
+                        <div class="clearfix chat-type-section">
+                            <input maxlength="256" placeholder="Type Here" type="text" id="chat-input-bar">
+                            <span class="send-text-icon">
+<!--                                <span data-dismiss="modal" aria-label="Close" class="close-modal">-->
 
+<!--                                        </span>-->
+                            </span>
                         </div>
+
                     </div>
                 </div>
             </div>
-
         </div>
+
     </div>
+</div>
+</div>
+
+
+<!--Create Load Modal-->
+
+<div class="modal fade" id="loadPopup" tabindex="-1" role="dialog" aria-labelledby="loadPopupLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+
+            <div class="modal-body">
+                <div class="clearfix">
+
+                    <!--                    Left Hand Side-->
+                    <div class="float-left chat-icon-background">
+                        <img src="images/load-create-icon.svg"
+                             alt="Chat Icon">
+                    </div>
+
+                    <!--                    Right Hand Side-->
+                    <div style="width: calc(100% - 274px);position: relative;"
+                         class="float-left load-input-section load-input-section-1">
+
+                        <div class="clearfix heading-bar-input-section">
+                            <div class="float-left">
+                                <h4 class="load-heading-name">Load23123123</h4>
+                            </div>
+
+                            <div class="float-right">
+                                 <span data-dismiss="modal" aria-label="Close" class="close-modal">
+
+                                        </span>
+                            </div>
+
+
+                        </div>
+
+                        <div class="clearfix wizard-bar-section mt-20">
+                            <div class="clearfix">
+                                <span class="circular-step-count active">1</span>
+                                <span class="linebar"></span>
+                                <span class="circular-step-count">2</span>
+                            </div>
+
+                            <div class="clearfix mt-10">
+                                <span class="circular-step-name active">Detail</span>
+                                <span class="linebar invisible"></span>
+                                <span class="circular-step-name">Pickup/Delivery</span>
+                            </div>
+
+
+                        </div>
+
+                        <div class="clearfix form-section-load mt-25">
+
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label>Weight*</label>
+                                        <input placeholder="Enter Weight(Ton)" class="input-create-load form-control"
+                                               type="number" style="">
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label>Truck Type*</label>
+                                        <select class="input-create-load form-control">
+                                            <option selected value="01">Truck Type</option>
+                                            <option value="01">Truck Type 1</option>
+                                            <option value="02">Truck Type 2</option>
+                                            <option value="03">Truck Type 3</option>
+                                        </select>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label>Target Rate</label>
+                                        <input placeholder="Enter Weight" class="input-create-load form-control"
+                                               type="number" style="">
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label>Price Type*</label>
+                                        <select class="input-create-load form-control">
+                                            <option selected value="01">Lump Sum</option>
+                                            <option value="01">Partial Payment</option>
+
+                                        </select>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label>Bid End*</label>
+                                        <input id="datepicker-createload"
+                                               placeholder="Enter Date"
+                                               class="input-create-load form-control date-type"
+                                               type="text"
+                                               style="">
+
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label class="invisible">Bid End*</label>
+                                        <input id="timepicker-createload"
+                                               placeholder="Enter Time"
+                                               class="input-create-load form-control time-type"
+                                               type="text"
+                                               style="">
+
+                                    </div>
+                                </div>
+                            </div>
+
+                             <div class="row">
+                                <div class="col-sm-12">
+                                    <div class="form-group">
+                                        <label>Comment</label>
+                                        <textarea maxlength="500" class="input-create-load form-control" rows="2" style="resize: none"></textarea>
+
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="clearfix">
+
+                                <button class="signup-button-style button-styling-continue float-left"> Continue
+                                    <span class="continue-icon"></span></button>
+
+                            </div>
+
+
+                        </div>
+
+
+                    </div>
+<!--                    Second Wizard Screen Hidden-->
+                     <div style="width: calc(100% - 274px);position: relative; display: none"
+                         class="float-left load-input-section load-input-section-2">
+
+                        <div class="clearfix heading-bar-input-section">
+                            <div class="float-left">
+                                <h4 class="load-heading-name">Load23123123</h4>
+                            </div>
+
+                            <div class="float-right">
+                                 <span data-dismiss="modal" aria-label="Close" class="close-modal">
+
+                                        </span>
+                            </div>
+
+
+                        </div>
+
+                        <div class="clearfix wizard-bar-section mt-20">
+                            <div class="clearfix">
+                                <span class="circular-step-count ">1</span>
+                                <span class="linebar"></span>
+                                <span class="circular-step-count active">2</span>
+                            </div>
+
+                            <div class="clearfix mt-10">
+                                <span class="circular-step-name ">Detail</span>
+                                <span class="linebar invisible"></span>
+                                <span class="circular-step-name active">Pickup/Delivery</span>
+                            </div>
+
+
+                        </div>
+
+                        <div class="clearfix form-section-load mt-25">
+
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label>City*</label>
+                                       <select class="input-create-load form-control">
+                                            <option selected value="01">Lahore</option>
+                                            <option value="01">Lahore 1</option>
+                                            <option value="02">Lahore 2</option>
+                                            <option value="03">Lahore 3</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label>City*</label>
+                                        <select class="input-create-load form-control">
+                                            <option selected value="01">Sargodha</option>
+                                            <option value="01">Sargodha 1</option>
+                                            <option value="02">Sargodha 2</option>
+                                            <option value="03">Sargodha 3</option>
+                                        </select>
+
+                                    </div>
+                                </div>
+                            </div>
+                              <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label>Area*</label>
+                                       <select class="input-create-load form-control">
+                                            <option selected value="01">DHA Phase</option>
+                                            <option value="01">DHA Phase 1</option>
+                                            <option value="02">DHA Phase 2</option>
+                                            <option value="03">DHA Phase 3</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label>Area*</label>
+                                        <select class="input-create-load form-control">
+                                            <option selected value="01">Falcon Complexe</option>
+                                            <option value="01">Falcon Complexe 1</option>
+                                            <option value="02">Falcon Complexe 2</option>
+                                            <option value="03">Falcon Complexe 3</option>
+                                        </select>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label>Address*</label>
+                                       <input type="text" class="input-create-load form-control">
+
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label>Address*</label>
+                                       <input type="text" class="input-create-load form-control">
+
+                                    </div>
+                                </div>
+                            </div>
+
+
+                             <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+
+                                        <label>Date/Time*</label>
+                                        <input id="datepicker-createload"
+                                               placeholder="Enter Date"
+                                               class="input-create-load form-control date-type"
+                                               type="datetime-local"
+                                               style="">
+
+
+
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                   <div class="form-group">
+
+                                        <label>Date/Time*</label>
+                                        <input id="datepicker-createload"
+                                               placeholder="Enter Date"
+                                               class="input-create-load form-control date-type"
+                                               type="datetime-local"
+                                               style="">
+
+
+
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+
+
+                            <div class="clearfix">
+
+
+
+                                <button class="btn btn-outline-primary">
+                                    Back
+                                </button>
+
+                                 <button class="btn btn-primary  ">
+                                    Submit
+                                </button>
+
+                            </div>
+
+
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
 </div>
 
 
@@ -150,6 +463,8 @@
         integrity="sha512-uto9mlQzrs59VwILcLiRYeLKPPbS/bT71da/OEBYEwcdNUk8jYIy+D176RYoop1Da+f9mvkYrmj5MCLZWEtQuA=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="js/bootstrap.js"></script>
+
+
 
 <script src="js/site.js">
 
