@@ -1,0 +1,118 @@
+body {
+  height: 100%;
+  width: 100%;
+}
+
+.masked-stylesheet {
+  background: transparent url('../images/masked-group-lhs.svg') 0% 0% no-repeat padding-box;
+  width: 100%;
+  min-height: 100%;
+  opacity: 1;
+}
+
+.masked-stylesheet {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  padding: 68px;
+}
+
+.branding-message-text {
+  text-align: left;
+  font-weight: 600;
+  font-size: 41px;
+  line-height: 50px;
+  letter-spacing: 0px;
+  color: #FFFFFF;
+
+}
+
+.blue-coloring {
+  color: #6BA8CF;
+}
+
+.signup-heading {
+  text-align: left;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 35px;
+  letter-spacing: 0px;
+  color: #111111;
+  margin-top: 80px;
+}
+
+.signup-heading.h4 {
+  margin-bottom: 5px;
+}
+
+.border-heading {
+  width: 69px;
+  height: 5px;
+  display: block;
+}
+
+.border-heading {
+  background-repeat: no-repeat;
+  background-position: 0% 0%;
+  background-origin: padding-box;
+  background-image: url('../images/border-heading.svg');
+  background-color: transparent;
+  background-clip: padding-box;
+}
+
+.signup-button-style {
+  background: #598FB1 0% 0% no-repeat padding-box;
+  border-radius: 6px;
+
+  text-align: center;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: normal;
+  letter-spacing: 0.28px;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  outline: 0;
+  padding: 11px 110px;
+  border: 0;
+}
+
+.link-styling {
+  text-align: left;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0px;
+  color: #598FB1;
+  text-decoration: none;
+  position: relative;
+  margin-top: 10px;
+}
+
+.signup-input-style {
+  height: 40px;
+  border: 1px solid #ECECEC;
+  border-radius: 8px;
+
+  text-align: left;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0px;
+  color: #111111;
+}
+
+.form-group label {
+  text-align: left;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0px;
+  color: #8698AD;
+}
+
+.copyright-text {
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 400;
+  letter-spacing: 0px;
+  color: #8A8A8A;
+}

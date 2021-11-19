@@ -115,9 +115,9 @@ body {
   color: #598FB1;
 
   display: inline-block;
-    position: relative;
-    top: 2px;
-    margin-right: 4px;
+  position: relative;
+  top: 2px;
+  margin-right: 4px;
 }
 
 .btn-styling {
@@ -305,25 +305,33 @@ body {
   display: inline-block;
 }
 
-.mt-10
-{
+.mt-10 {
   margin-top: 10px;
 }
 
-.full-width
-{
+.full-width {
   width: 100%;
 }
 
 
-.padder-left-only
-{
+.padder-left-only {
   padding-left: 15px !important;
   padding-right: 0px;
 }
 
-.padder-right-only
-{
+.padder-right-only {
   padding-left: 0px;
   padding-right: 15px !important;
+}
+
+.mt-40 {
+  margin-top: 40px;
+}
+
+
+
+
+.mt-120
+{
+  margin-top: 120px;
 }

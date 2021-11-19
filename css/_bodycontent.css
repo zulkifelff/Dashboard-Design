@@ -634,7 +634,7 @@ tr.each-table-row-load {
   height: 32px;
   cursor: pointer;
   display: inline-block;
-  margin-right: 8px;
+  margin-right: 0px;
   background: transparent url("../images/load-chat-icon.svg") 0% 0% no-repeat padding-box;
 }
 
@@ -669,6 +669,36 @@ tr.each-table-row-load {
   line-height: 19px;
   clear: both;
   display: block;
+}
+
+table tr.separator {
+  height: 10px;
+}
+
+.each-table-row-load.lowest {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.06);
+  border: 1px solid #598FB1;
+  position: relative;
+}
+
+.table-style-load {
+  border-collapse: collapse !important;
+}
+
+tr.each-table-row-load.lowest:after {
+  content: "Lowest Bid";
+  position: absolute;
+  bottom: -7px;
+  font-size: 8px;
+  background: #598FB1 0% 0% no-repeat padding-box;
+  border-radius: 8px;
+  color: #FFF;
+  width: 84px;
+  /* height: 22
+  px
+  ; */
+  text-align: center;
+  left: 50%;
 }
 
 /*# sourceMappingURL=_bodycontent.css.map */
