@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Popups</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"
+          integrity="sha512-0S+nbAYis87iX26mmj/+fWt1MmaKCv80H+Mbo+Ne7ES4I6rxswpfnC6PxmLiw33Ywj2ghbtTw0FkLbMWqh4F7Q=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/signup.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css"
+          integrity="sha512-aOG0c6nPNzGk+5zjwyJaoRUgCdOrfSDhmMID2u4+OIslr0GjpLKo7Xm0Ao3xmpM4T8AmIouRkqwj1nrdVsLKEQ=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap"
+          rel="stylesheet">
+
+
+</head>
+<body>
+
+
+<div class="container-fluid">
+    <div class="row">
+        <button data-toggle="modal" data-target="#chatPopup" class="btn btn-outline-primary">Chat Popup</button>
+        <button class="btn btn-primary">Order Delivery 1</button>
+        <button class="btn btn-warning">Order Delivery 2</button>
+        <button class="btn btn-outline-warning">Profile</button>
+    </div>
+</div>
+
+
+<!-- Chat Popup Modal -->
+<div class="modal fade" id="chatPopup" tabindex="-1" role="dialog" aria-labelledby="chatPopupLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+
+            <div class="modal-body">
+                <div class="row">
+
+                    <!--                    Left Hand Side-->
+                    <div class="float-left chat-icon-background">
+                        <img src="images/chat-icon.svg"
+                             alt="Chat Icon">
+                    </div>
+
+                    <!--                    Right Hand Side-->
+                    <div style="    width: calc(100% - 274px);position: relative;" class="float-left chat-section">
+                        <!--                        Chat Details-->
+                        <div class="clearfix chat-detail-section mt-15">
+                            <div class="media">
+                                <img class="mr-2 avatar-styling"
+                                     src="images/kate-bock.jpg"
+                                     alt="Generic placeholder image">
+                                <div class="media-body">
+                                    <div class="float-left">
+                                        <h5 class="mt-0 chat-person-name">Laurel Reyes</h5>
+                                        <span class="connectivity-status online">Online</span>
+                                    </div>
+                                    <div class="float-right">
+                                        <span data-dismiss="modal" aria-label="Close" class="close-modal">
+
+                                        </span>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--                        Bids Detail-->
+                        <div class="clearfix order-detail-section mt-20">
+                            <div class="float-left">
+                                <span class="pill-style-bid general">
+                                    Bid : <span class="font-weight-bold">Rs. 140,000,000</span>
+                                </span>
+                            </div>
+
+                            <div class="float-right">
+
+                                <span class="pill-style-bid lowest">
+                                   Lowest Bid : <span class="font-weight-bold">Rs. 130,000,000</span>
+                                </span>
+
+                            </div>
+                        </div>
+
+                        <!--                        Chat Box-->
+
+                        <div class="clearfix chat-type-section">
+                            <input maxlength="256" placeholder="Type Here" type="text" id="chat-input-bar">
+                            <span class="send-text-icon"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"
+        integrity="sha512-uto9mlQzrs59VwILcLiRYeLKPPbS/bT71da/OEBYEwcdNUk8jYIy+D176RYoop1Da+f9mvkYrmj5MCLZWEtQuA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="js/bootstrap.js"></script>
+
+<script src="js/site.js">
+
+</script>
+
+
+</body>
+</html>
