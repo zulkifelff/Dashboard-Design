@@ -333,6 +333,17 @@ body {
   width: 100%;
 }
 
+.form-group .error {
+  font-size: 8px;
+  width: 100%;
+  clear: both;
+  color: $color_thunderbird_approx;
+  display: block;
+}
+
+.form-group .not-filled {
+  border-color: $color_thunderbird_approx;
+}
 
 .padder-left-only {
   padding-left: 15px !important;
@@ -346,19 +357,13 @@ body {
 
 
 
-.form-group .error {
-  font-size: 8px;
-  width: 100%;
-  clear: both;
-  color: $color_thunderbird_approx;
-  display: block;
-}
 
-.form-group .not-filled {
-  border-color: $color_thunderbird_approx;
-}
 
 .mr-10
 {
   margin-right: 10px;
 }
+
+
+
+

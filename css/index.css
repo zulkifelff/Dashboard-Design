@@ -1740,16 +1740,6 @@ body {
   width: 100%;
 }
 
-.padder-left-only {
-  padding-left: 15px !important;
-  padding-right: 0px;
-}
-
-.padder-right-only {
-  padding-left: 0px;
-  padding-right: 15px !important;
-}
-
 .form-group .error {
   font-size: 8px;
   width: 100%;
@@ -1760,6 +1750,16 @@ body {
 
 .form-group .not-filled {
   border-color: #d91e18;
+}
+
+.padder-left-only {
+  padding-left: 15px !important;
+  padding-right: 0px;
+}
+
+.padder-right-only {
+  padding-left: 0px;
+  padding-right: 15px !important;
 }
 
 .mr-10 {
