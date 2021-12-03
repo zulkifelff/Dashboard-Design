@@ -236,7 +236,6 @@
                             <th scope="col">Bid Amount <span class="sorting sorting-icon down"></span></th>
                             <th scope="col">Message</th>
                             <th scope="col" colspan="3"></th>
-                            <!--                <th scope="col">Action</th>-->
                         </tr>
                         </thead>
                         <tbody>
@@ -265,7 +264,7 @@
                                 </span>
 
                                 <span class="bid-action reject"></span>
-                                <span class="bid-action accept"></span>
+                                <span data-toggle="modal" data-target="#acceptBidModal" class="bid-action accept"></span>
                             </td>
 
                         </tr>
@@ -402,6 +401,58 @@
 
 </section>
 
+
+<!-- Modal -->
+<div class="modal fade" id="acceptBidModal" tabindex="-1" role="dialog" aria-labelledby="ExampleAcceptBidModal" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+        <div class="modal-content">
+
+            <div class="modal-body">
+                <div class="row">
+
+
+
+                    <!--                    Right Hand Side-->
+                    <div style=" " class=" acceptance-section">
+                        <!--                        Chat Details-->
+                        <div class="clearfix chat-detail-section mt-10">
+                            <div class="float-left">
+                                <span class="invisible">
+                                    Modal
+                                </span>
+<!--                                        <span data-dismiss="modal" aria-label="Close" class="close-modal">-->
+<!--                                        </span>-->
+                                    </div>
+                           <div class="float-right">
+                                        <span data-dismiss="modal" aria-label="Close" class="close-modal">
+                                        </span>
+                                    </div>
+                        </div>
+
+                        <div class="clearfix row text-center mt-20">
+                            <img src="images/accept-bid-modal-icon.svg" class="center-everything">
+                        </div>
+
+                        <div class="clearfix row  text-center mt-30 content-acceptance-region">
+                            <h2 class="center-everything">
+                                Do you want to Accept this offer?
+                            </h2>
+                        </div>
+
+                        <div class="row mt-40 btn-region-accept">
+                            <button class="outline-btn-blue mr-3">Cancel</button>
+                            <button class="fill-btn-blue">Accept</button>
+                        </div>
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
 
 <!--Footer Code-->
 <footer>

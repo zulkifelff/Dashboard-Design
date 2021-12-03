@@ -87,6 +87,11 @@
     max-width: 801px;
   }
 
+  #acceptBidModal .modal-dialog {
+    max-width: 490px;
+  }
+
+
   .chat-icon-background {
     display: flex;
     flex-direction: row;
@@ -315,8 +320,6 @@
 }
 
 
-
-
 .form-section-load .input-create-load.date-type {
 
 
@@ -329,23 +332,23 @@
 }
 
 .input-create-load {
-	text-align: left;
-	font-size: 14px;
-	font-weight: normal;
-	line-height: 21px;
-	letter-spacing: 0px;
-	color: rgba(17, 17, 17, 1);
-}
-.form-section-load {
-	.input-create-load.time-type {
-		background-repeat: no-repeat;
-		background-position: 8px 9px;
-		background-image: url("../images/clock-icon.svg");
-		background-attachment: scroll;
-		padding-left: 30px;
-	}
+  text-align: left;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 21px;
+  letter-spacing: 0px;
+  color: rgba(17, 17, 17, 1);
 }
 
+.form-section-load {
+  .input-create-load.time-type {
+    background-repeat: no-repeat;
+    background-position: 8px 9px;
+    background-image: url("../images/clock-icon.svg");
+    background-attachment: scroll;
+    padding-left: 30px;
+  }
+}
 
 
 .signup-button-style .continue-icon {
@@ -374,4 +377,60 @@
   line-height: 21px;
   letter-spacing: 0;
   color: rgba(17, 17, 17, 1);
+}
+
+.acceptance-section {
+  width: 100%;
+}
+
+
+.content-acceptance-region {
+  max-width: 280px;
+  display: block;
+  margin: 0 auto;
+}
+
+.content-acceptance-region h2 {
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 35px;
+  letter-spacing: 0px;
+  color: #111111;
+}
+
+.outline-btn-blue {
+  text-align: center;
+  font-size: 16px;
+  line-height: 25px;
+  letter-spacing: 0px;
+  color: #598FB1;
+
+  border: 1px solid #598FB1;
+border-radius: 6px;
+  background-color: transparent;
+    font-weight: 300;
+  padding: 12px 60px;
+}
+
+.fill-btn-blue {
+  text-align: left;
+  font-size: 16px;
+  line-height: 25px;
+background: #598FB1 0% 0% no-repeat padding-box;
+border: 1px solid #598FB1;
+border-radius: 6px;
+  letter-spacing: 0px;
+  color: #FFFFFF;
+  font-weight: 300;
+    padding: 12px 60px;
+
+}
+
+.btn-region-accept
+{
+  text-align: center;
+    margin: 0 auto;
+    display: block;
+    margin-top: 40px;
 }

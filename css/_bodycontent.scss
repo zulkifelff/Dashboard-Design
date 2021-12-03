@@ -846,8 +846,11 @@ tr.each-table-row-load.lowest {
 
 .accepted-driver-details
 {
+
+
   background: #FFFFFF 0% 0% no-repeat padding-box;
-border-radius: 12px;
+    border-radius: 12px;
+    filter: drop-shadow(1px 1px 1px #dddddd);
 }
 
 .accepted-driver-avatar
