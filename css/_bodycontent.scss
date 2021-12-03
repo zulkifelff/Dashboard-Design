@@ -843,3 +843,17 @@ tr.each-table-row-load.lowest {
     left: 50%;
   }
 }
+
+.accepted-driver-details
+{
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+border-radius: 12px;
+}
+
+.accepted-driver-avatar
+{
+  width: 44px;
+height: 44px;
+  border-radius: 50%;
+  object-fit: cover;
+}
