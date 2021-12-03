@@ -168,7 +168,9 @@ input[type=date]::-webkit-calendar-picker-indicator {
   background: $white 0 0 no-repeat padding-box;
   //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
   box-shadow: 0 2px 1px $black_6;
-  padding: 17px;
+  //padding: 17px;
+  padding-top: 17px;
+  padding-bottom: 17px;
   border-bottom: 2px solid $gallery;
 
   .row.early-details {
@@ -180,6 +182,11 @@ input[type=date]::-webkit-calendar-picker-indicator {
   }
 }
 
+.individual-load-detail .padding-plumber
+{
+  padding-left: 17px;
+  padding-right: 17px;
+}
 .load-name-style {
   text-align: left;
   font-weight: 300;
@@ -321,6 +328,32 @@ input[type=date]::-webkit-calendar-picker-indicator {
   flex-wrap: nowrap;
   align-content: stretch;
   align-items: flex-start;
+}
+
+.bobbling-truck
+{
+  border-bottom: 1px solid #CCC;
+    border-top: 1px solid #CCC;
+}
+
+.bobbling-truck
+{
+  padding: 10px 17px;
+}
+
+.truck-metadata {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+}
+
+.truck-circle-ring {
+  border-radius: 50%;
+  background-color: #c4d7e3;
+  padding: 2px 6px;
 }
 
 .search-result {
@@ -667,33 +700,36 @@ tr.each-table-row-load {
 }
 
 .bid-action.accept {
-	width: 32px;
-	height: 32px;
-	visibility: hidden;
-	display: inline-block;
-	transition: opacity 250ms ease-in;
-	cursor: pointer;
-	background: transparent url('../images/accept-bid.svg') 0% 0% no-repeat padding-box;
+  width: 32px;
+  height: 32px;
+  visibility: hidden;
+  display: inline-block;
+  transition: opacity 250ms ease-in;
+  cursor: pointer;
+  background: transparent url('../images/accept-bid.svg') 0% 0% no-repeat padding-box;
 }
+
 .each-table-row-load {
-	&:hover {
-		.bid-action.accept {
-			visibility: visible;
-		}
-		.bid-action.reject {
-			visibility: visible;
-		}
-	}
+  &:hover {
+    .bid-action.accept {
+      visibility: visible;
+    }
+
+    .bid-action.reject {
+      visibility: visible;
+    }
+  }
 }
+
 .bid-action.reject {
-	width: 32px;
-	height: 32px;
-	visibility: hidden;
-	cursor: pointer;
-	display: inline-block;
-	transition: opacity 250ms ease-in;
-	margin-right: 4px;
-	background: transparent url('../images/discard-bid.svg') 0% 0% no-repeat padding-box;
+  width: 32px;
+  height: 32px;
+  visibility: hidden;
+  cursor: pointer;
+  display: inline-block;
+  transition: opacity 250ms ease-in;
+  margin-right: 4px;
+  background: transparent url('../images/discard-bid.svg') 0% 0% no-repeat padding-box;
 }
 
 
@@ -729,15 +765,16 @@ tr.each-table-row-load {
 }
 
 .value-style-stats.table-style {
-	font-size: 12px;
-	line-height: 22px;
-	clear: both;
+  font-size: 12px;
+  line-height: 22px;
+  clear: both;
 }
+
 .heading-style-stats.table-style {
-	font-size: 13px;
-	line-height: 19px;
-	clear: both;
-	display: block;
+  font-size: 13px;
+  line-height: 19px;
+  clear: both;
+  display: block;
 }
 
 
@@ -746,27 +783,27 @@ table tr.separator {
 }
 
 
-
 .table-style-load {
   border-collapse: collapse !important;
 }
 
 .each-table-row-load.lowest {
-	box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.06);
-	border: 1px solid #598FB1;
-	position: relative;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.06);
+  border: 1px solid #598FB1;
+  position: relative;
 }
+
 tr.each-table-row-load.lowest {
-	&:after {
-		content: 'Lowest Bid';
-		position: absolute;
-		bottom: -7px;
-		font-size: 8px;
-		background: #598FB1 0% 0% no-repeat padding-box;
-		border-radius: 8px;
-		color: #FFF;
-		width: 84px;
-		text-align: center;
-		left: 50%;
-	}
+  &:after {
+    content: 'Lowest Bid';
+    position: absolute;
+    bottom: -7px;
+    font-size: 8px;
+    background: #598FB1 0% 0% no-repeat padding-box;
+    border-radius: 8px;
+    color: #FFF;
+    width: 84px;
+    text-align: center;
+    left: 50%;
+  }
 }
