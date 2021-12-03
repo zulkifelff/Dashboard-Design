@@ -1116,25 +1116,23 @@ input[type=date]::-webkit-calendar-picker-indicator {
 }
 
 .load-pill.open {
-  background-color: #76b8e2;
   border-radius: 15px;
   padding: 0;
   vertical-align: middle;
   display: flex;
   align-content: center;
   flex-direction: row;
-  justify-content: flex-end;
+  justify-content: left;
   align-items: center;
 }
 .load-pill.closed {
-  background-color: #9f9f9f;
   border-radius: 15px;
   padding: 0;
   vertical-align: middle;
   display: flex;
   align-content: center;
   flex-direction: row;
-  justify-content: flex-start;
+  justify-content: left;
   align-items: center;
 }
 
