@@ -70,9 +70,14 @@ a {
 
 
 .menu-ordering-individual-list {
-	background: $color_mirage_approx 0 0 no-repeat padding-box;
+
 	border-radius: 24px 0 0 24px;
 	padding: 11.25px 0 11.25px 17px;
+}
+
+.menu-ordering-individual-list.current
+{
+  background: $color_mirage_approx 0 0 no-repeat padding-box;
 }
 li.menu-ordering-individual-list {
 	list-style: none;
