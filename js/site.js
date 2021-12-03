@@ -7,11 +7,11 @@ jQuery(function () {
 
     jQuery('#datepicker-createload').datepicker({});
 
-    jQuery(document).on("click", ".button-styling-continue", function (e)
-    {
-        jQuery('.load-input-section-1').fadeOut('fast','linear',eventCallBack(e));
-       jQuery('.load-input-section-2').fadeIn('slow','linear',eventCallBack(e));
-    });
+    // jQuery(document).on("click", ".button-styling-continue", function (e)
+    // {
+    //     jQuery('.load-input-section-1').fadeOut('fast','linear',eventCallBack(e));
+    //    jQuery('.load-input-section-2').fadeIn('slow','linear',eventCallBack(e));
+    // });
 
 });
 
