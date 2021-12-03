@@ -1101,7 +1101,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
   color: white;
   border-radius: 15px;
   background: #598fb1 0 0 no-repeat padding-box;
-  font-size: 10px;
+  font-size: 13px;
   line-height: 16px;
   letter-spacing: 0;
 }
@@ -1110,7 +1110,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
   color: white;
   border-radius: 15px;
   background: gainsboro 0 0 no-repeat padding-box;
-  font-size: 10px;
+  font-size: 13px;
   line-height: 16px;
   letter-spacing: 0;
 }
@@ -1134,6 +1134,51 @@ input[type=date]::-webkit-calendar-picker-indicator {
   flex-direction: row;
   justify-content: left;
   align-items: center;
+}
+
+.open-icon-style {
+  padding: 6px 18px;
+  text-align: center;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 20px;
+  letter-spacing: 0px;
+  color: #FFFFFF;
+  opacity: 0;
+  cursor: pointer;
+  background-color: #45b64d;
+  border-radius: 16px;
+  margin-right: 10px;
+}
+
+.each-table-row-load:hover .open-icon-style {
+  opacity: 1;
+}
+
+.close-icon-style {
+  padding: 6px 18px;
+  text-align: center;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 20px;
+  letter-spacing: 0px;
+  color: #FFFFFF;
+  opacity: 0;
+  background-color: transparent;
+  border-radius: 16px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.each-table-row-load:hover .close-icon-style {
+  opacity: 1;
+  color: #8698ad;
+  border: 1px solid #8698ad;
+}
+.each-table-row-load:hover .close-icon-style:active {
+  color: #FFFFFF;
+  background-color: #d91e18;
+  border: 1px solid #d91e18;
 }
 
 .each-table-row-load:hover .deletion-icon-style::before {

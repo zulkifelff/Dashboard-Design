@@ -182,11 +182,11 @@ input[type=date]::-webkit-calendar-picker-indicator {
   }
 }
 
-.individual-load-detail .padding-plumber
-{
+.individual-load-detail .padding-plumber {
   padding-left: 17px;
   padding-right: 17px;
 }
+
 .load-name-style {
   text-align: left;
   font-weight: 300;
@@ -330,14 +330,12 @@ input[type=date]::-webkit-calendar-picker-indicator {
   align-items: flex-start;
 }
 
-.bobbling-truck
-{
+.bobbling-truck {
   border-bottom: 1px solid #CCC;
-    border-top: 1px solid #CCC;
+  border-top: 1px solid #CCC;
 }
 
-.bobbling-truck
-{
+.bobbling-truck {
   padding: 10px 17px;
 }
 
@@ -468,7 +466,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
     //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
     border-radius: 15px;
     background: $color_hippie_blue_approx 0 0 no-repeat padding-box;
-    font-size: 10px;
+    font-size: 13px;
     line-height: 16px;
     letter-spacing: 0;
   }
@@ -479,7 +477,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
     //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
     border-radius: 15px;
     background: $color_alto_approx 0 0 no-repeat padding-box;
-    font-size: 10px;
+    font-size: 13px;
     line-height: 16px;
     letter-spacing: 0;
   }
@@ -512,6 +510,62 @@ input[type=date]::-webkit-calendar-picker-indicator {
     align-items: center;
   }
 }
+
+.open-icon-style {
+  padding: 6px 18px;
+  text-align: center;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 20px;
+  letter-spacing: 0px;
+  color: #FFFFFF;
+  opacity: 0;
+    cursor: pointer;
+  background-color: $color_apple_approx;
+  border-radius: 16px;
+  margin-right: 10px;
+}
+
+.each-table-row-load {
+  &:hover {
+    .open-icon-style {
+      opacity: 1;
+    }
+  }
+}
+
+
+.close-icon-style {
+  padding: 6px 18px;
+  text-align: center;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 20px;
+  letter-spacing: 0px;
+  color: #FFFFFF;
+  opacity: 0;
+  background-color: transparent;
+  border-radius: 16px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.each-table-row-load {
+  &:hover {
+    .close-icon-style {
+      opacity: 1;
+      color: $color_bali_hai_approx;
+      border:1px solid $color_bali_hai_approx;
+    }
+    .close-icon-style:active
+    {
+      color: #FFFFFF;
+      background-color: $color_thunderbird_approx;
+      border:1px solid $color_thunderbird_approx;
+    }
+  }
+}
+
 
 .each-table-row-load {
   &:hover {
@@ -778,39 +832,34 @@ tr.each-table-row-load {
 }
 
 
-.accepted-pill-bar
-{
-background: #598FB1 0% 0% no-repeat padding-box;
-    font-weight: normal;
-    font-size: 12px;
-    letter-spacing: 0px;
-    color: #FFFFFF;
-    border-top-left-radius: 16px;
+.accepted-pill-bar {
+  background: #598FB1 0% 0% no-repeat padding-box;
+  font-weight: normal;
+  font-size: 12px;
+  letter-spacing: 0px;
+  color: #FFFFFF;
+  border-top-left-radius: 16px;
   border-bottom-left-radius: 16px;
   padding: 5px 10px;
 
 }
 
-.accepted-pill-bar
-{
+.accepted-pill-bar {
   vertical-align: top;
-    text-align: right;
-    float: right;
+  text-align: right;
+  float: right;
 }
 
-td.break.accepted-bid-detail
-{
+td.break.accepted-bid-detail {
   float: left;
   line-height: 22px;
 }
 
-.each-table-row-load.accepted-bid
-{
+.each-table-row-load.accepted-bid {
   background: #D9EBF6 0% 0% no-repeat padding-box;
 }
 
-.each-table-row-load.accepted-bid td:last-child
-{
+.each-table-row-load.accepted-bid td:last-child {
   padding-right: 0px;
 }
 
@@ -844,19 +893,17 @@ tr.each-table-row-load.lowest {
   }
 }
 
-.accepted-driver-details
-{
+.accepted-driver-details {
 
 
   background: #FFFFFF 0% 0% no-repeat padding-box;
-    border-radius: 12px;
-    filter: drop-shadow(1px 1px 1px #dddddd);
+  border-radius: 12px;
+  filter: drop-shadow(1px 1px 1px #dddddd);
 }
 
-.accepted-driver-avatar
-{
+.accepted-driver-avatar {
   width: 44px;
-height: 44px;
+  height: 44px;
   border-radius: 50%;
   object-fit: cover;
 }
