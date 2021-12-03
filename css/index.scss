@@ -344,3 +344,17 @@ body {
 {
   margin-top: 110px;
 }
+
+.form-group .error
+{
+      font-size: 8px;
+    width: 100%;
+    clear: both;
+    color: $color_thunderbird_approx;
+    display: block;
+}
+
+.form-group .not-filled
+{
+  border-color: $color_thunderbird_approx;
+}

@@ -1,11 +1,13 @@
 .chat-icon-background {
   background-repeat: no-repeat;
-  background-position: 0% 0%;
+  background-position: 0 0;
   background-origin: padding-box;
   background-color: transparent;
   background-clip: padding-box;
-  min-height: 542px;
+
+  min-height: 580px;
   height: 100%;
+  background-size: cover;
 
 }
 
@@ -214,7 +216,7 @@
   padding: 8px 16px;
   background: #D9EBF6 0% 0% no-repeat padding-box;
   border-radius: 4px;
-  letter-spacing: 0px;
+  letter-spacing: 0;
   color: #598FB1;
 
 }
@@ -223,7 +225,7 @@
   padding: 8px 16px;
   background: #F8F8F9 0% 0% no-repeat padding-box;
   border-radius: 4px;
-  letter-spacing: 0px;
+  letter-spacing: 0;
   color: #001940;
 }
 
@@ -363,14 +365,13 @@
 .invite-message-heading {
   font-size: 24px;
   line-height: 35px;
-  letter-spacing: 0px;
+  letter-spacing: 0;
   color: rgba(17, 17, 17, 1);
 }
 
-.invite-message-paragraph
-{
+.invite-message-paragraph {
   font-size: 14px;
   line-height: 21px;
-letter-spacing: 0px;
-color: rgba(17, 17, 17, 1);
+  letter-spacing: 0;
+  color: rgba(17, 17, 17, 1);
 }

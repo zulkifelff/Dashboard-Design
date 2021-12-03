@@ -5,8 +5,9 @@
   background-origin: padding-box;
   background-color: transparent;
   background-clip: padding-box;
-  min-height: 542px;
+  min-height: 580px;
   height: 100%;
+  background-size: cover;
 }
 
 .chat-icon-background {
@@ -1499,6 +1500,18 @@ body {
 
 .mt-110 {
   margin-top: 110px;
+}
+
+.form-group .error {
+  font-size: 8px;
+  width: 100%;
+  clear: both;
+  color: #d91e18;
+  display: block;
+}
+
+.form-group .not-filled {
+  border-color: #d91e18;
 }
 
 /*# sourceMappingURL=index.css.map */
