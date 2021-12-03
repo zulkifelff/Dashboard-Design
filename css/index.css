@@ -1,7 +1,7 @@
 @charset "UTF-8";
 .chat-icon-background {
   background-repeat: no-repeat;
-  background-position: 0% 0%;
+  background-position: 0 0;
   background-origin: padding-box;
   background-color: transparent;
   background-clip: padding-box;
@@ -200,7 +200,7 @@
   padding: 8px 16px;
   background: #D9EBF6 0% 0% no-repeat padding-box;
   border-radius: 4px;
-  letter-spacing: 0px;
+  letter-spacing: 0;
   color: #598FB1;
 }
 
@@ -208,7 +208,7 @@
   padding: 8px 16px;
   background: #F8F8F9 0% 0% no-repeat padding-box;
   border-radius: 4px;
-  letter-spacing: 0px;
+  letter-spacing: 0;
   color: #001940;
 }
 
@@ -292,6 +292,14 @@
   border-radius: 8px;
 }
 
+.form-section-load .input-create-load.date-type {
+  background-repeat: no-repeat;
+  background-position: 8px 9px;
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAASCAYAAAC9+TVUAAAABHNCSVQICAgIfAhkiAAAAZJJREFUOE/tU00vA2EQnilSB6LHXnwcJBwc1B9QV6RbLrol0V9At+LkUmdpdntxcdBGtIToB3cOfgCJa0UiceBCXBzaHc9uLe0SKnE0yZN3Z+Z9n3d23nmYXKbqpQoxbebjSqoxNW+Up02R3Wpbx+DB0uRDY44dJ6IXgkSecQSSiN0ScaWJn8VPQsOIHWI9ySeUrJO3SXB7Bssi8AR0AXfAtatIP/wh4BnoBi68ZE5ktJlHVvVynEh03KzltZABwntm3srFQ2uNJKpRWkAFO+3M/VXhMSKzgHw2rykxkJTO4PjgjFqHIqli795KGL/z2eY2jkb2V2ev3qo3sC7jHFskAicNBxW1blG9HBOSbSYz4JA0n2Z6+ZJOqNMdr5kyVSdhPkfSQsuGF+kTkaiguTYJAus5TUm2zGD1DiPB5Dn9J/no2p/0xD0n1sT2YNgCv3kdvGrjxNa1w0LxXEJJt0Lk/Mq7dmy96KUiZkXB5w2ECHxn4kPW0tklVBy0VexsV/XjMJQJ0MDP1XDRS7WMRWDtfQVCXceEk7KnoQAAAABJRU5ErkJggg==");
+  background-attachment: scroll;
+  padding-left: 30px;
+}
+
 .input-create-load {
   text-align: left;
   font-size: 14px;
@@ -299,14 +307,6 @@
   line-height: 21px;
   letter-spacing: 0px;
   color: #111111;
-}
-
-.form-section-load .input-create-load.date-type {
-  background-repeat: no-repeat;
-  background-position: 8px 9px;
-  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAASCAYAAAC9+TVUAAAABHNCSVQICAgIfAhkiAAAAZJJREFUOE/tU00vA2EQnilSB6LHXnwcJBwc1B9QV6RbLrol0V9At+LkUmdpdntxcdBGtIToB3cOfgCJa0UiceBCXBzaHc9uLe0SKnE0yZN3Z+Z9n3d23nmYXKbqpQoxbebjSqoxNW+Up02R3Wpbx+DB0uRDY44dJ6IXgkSecQSSiN0ScaWJn8VPQsOIHWI9ySeUrJO3SXB7Bssi8AR0AXfAtatIP/wh4BnoBi68ZE5ktJlHVvVynEh03KzltZABwntm3srFQ2uNJKpRWkAFO+3M/VXhMSKzgHw2rykxkJTO4PjgjFqHIqli795KGL/z2eY2jkb2V2ev3qo3sC7jHFskAicNBxW1blG9HBOSbSYz4JA0n2Z6+ZJOqNMdr5kyVSdhPkfSQsuGF+kTkaiguTYJAus5TUm2zGD1DiPB5Dn9J/no2p/0xD0n1sT2YNgCv3kdvGrjxNa1w0LxXEJJt0Lk/Mq7dmy96KUiZkXB5w2ECHxn4kPW0tklVBy0VexsV/XjMJQJ0MDP1XDRS7WMRWDtfQVCXceEk7KnoQAAAABJRU5ErkJggg==");
-  background-attachment: scroll;
-  padding-left: 30px;
 }
 
 .form-section-load .input-create-load.time-type {
@@ -332,14 +332,14 @@
 .invite-message-heading {
   font-size: 24px;
   line-height: 35px;
-  letter-spacing: 0px;
+  letter-spacing: 0;
   color: #111111;
 }
 
 .invite-message-paragraph {
   font-size: 14px;
   line-height: 21px;
-  letter-spacing: 0px;
+  letter-spacing: 0;
   color: #111111;
 }
 
@@ -1099,6 +1099,9 @@ tr.each-table-row-load {
 .each-table-row-load:hover .bid-action.accept {
   visibility: visible;
 }
+.each-table-row-load:hover .bid-action.reject {
+  visibility: visible;
+}
 
 .bid-action.reject {
   width: 32px;
@@ -1109,10 +1112,6 @@ tr.each-table-row-load {
   transition: opacity 250ms ease-in;
   margin-right: 4px;
   background: transparent url("../images/discard-bid.svg") 0% 0% no-repeat padding-box;
-}
-
-.each-table-row-load:hover .bid-action.reject {
-  visibility: visible;
 }
 
 .load-chat-icon {
@@ -1161,14 +1160,14 @@ table tr.separator {
   height: 10px;
 }
 
+.table-style-load {
+  border-collapse: collapse !important;
+}
+
 .each-table-row-load.lowest {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.06);
   border: 1px solid #598FB1;
   position: relative;
-}
-
-.table-style-load {
-  border-collapse: collapse !important;
 }
 
 tr.each-table-row-load.lowest:after {
@@ -1180,9 +1179,6 @@ tr.each-table-row-load.lowest:after {
   border-radius: 8px;
   color: #FFF;
   width: 84px;
-  /* height: 22
-  px
-  ; */
   text-align: center;
   left: 50%;
 }
@@ -1204,6 +1200,22 @@ body {
 .center-everything {
   margin: 0 auto;
   text-align: center;
+}
+
+.mt-40 {
+  margin-top: 40px;
+}
+
+.mt-120 {
+  margin-top: 120px;
+}
+
+.mt-25 {
+  margin-top: 25px;
+}
+
+.mt-110 {
+  margin-top: 110px;
 }
 
 .mt-15 {
@@ -1484,22 +1496,6 @@ body {
 .padder-right-only {
   padding-left: 0px;
   padding-right: 15px !important;
-}
-
-.mt-40 {
-  margin-top: 40px;
-}
-
-.mt-120 {
-  margin-top: 120px;
-}
-
-.mt-25 {
-  margin-top: 25px;
-}
-
-.mt-110 {
-  margin-top: 110px;
 }
 
 .form-group .error {

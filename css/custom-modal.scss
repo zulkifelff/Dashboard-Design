@@ -315,14 +315,6 @@
 }
 
 
-.input-create-load {
-  text-align: left;
-  font-size: 14px;
-  font-weight: normal;
-  line-height: 21px;
-  letter-spacing: 0px;
-  color: rgba(17, 17, 17, 1);
-}
 
 
 .form-section-load .input-create-load.date-type {
@@ -336,16 +328,24 @@
 
 }
 
-.form-section-load .input-create-load.time-type {
-
-
-  background-repeat: no-repeat;
-  background-position: 8px 9px;
-  background-image: url("../images/clock-icon.svg");
-  background-attachment: scroll;
-  padding-left: 30px;
-
+.input-create-load {
+	text-align: left;
+	font-size: 14px;
+	font-weight: normal;
+	line-height: 21px;
+	letter-spacing: 0px;
+	color: rgba(17, 17, 17, 1);
 }
+.form-section-load {
+	.input-create-load.time-type {
+		background-repeat: no-repeat;
+		background-position: 8px 9px;
+		background-image: url("../images/clock-icon.svg");
+		background-attachment: scroll;
+		padding-left: 30px;
+	}
+}
+
 
 
 .signup-button-style .continue-icon {
