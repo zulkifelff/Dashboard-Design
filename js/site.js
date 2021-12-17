@@ -1,5 +1,3 @@
-
-
 jQuery(function () {
     jQuery("#datepicker").datepicker({
         showButtonPanel: false
@@ -7,11 +5,6 @@ jQuery(function () {
 
     jQuery('#datepicker-createload').datepicker({});
 
-    // jQuery(document).on("click", ".button-styling-continue", function (e)
-    // {
-    //     jQuery('.load-input-section-1').fadeOut('fast','linear',eventCallBack(e));
-    //    jQuery('.load-input-section-2').fadeIn('slow','linear',eventCallBack(e));
-    // });
 
 });
 
@@ -24,5 +17,18 @@ function SearchBarFocused() {
 }
 
 function eventCallBack(e) {
-console.log(e);
+    console.log(e);
+}
+
+
+function sendLoaderRequest(incomingVariable) {
+    debugger;
+    let loaderElement = document.querySelector('#loaderHolder');
+    if (incomingVariable == true) {
+
+        loaderElement.classList.remove('hidden');
+    } else {
+        loaderElement.classList.add('hidden');
+    }
+    delete loaderElement;
 }
