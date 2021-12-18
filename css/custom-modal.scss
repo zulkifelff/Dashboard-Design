@@ -280,14 +280,21 @@
   padding: 15px 25px;
   border-top: 1px solid #cccccc;
   border-bottom: 1px solid #cccccc;
-  height: calc(100% - 180px);
-  max-height: calc(100% - 180px);
+  //height: calc(100% - 180px);
+  //max-height: calc(100% - 180px);
+  height: 450px;
+  max-height: 450px;
 
 }
 
 .individual-message.outgoing {
   /* text-align: right; */
   float: right;
+  clear: both;
+}
+
+.individual-message.incoming {
+  clear: both;
 }
 
 
@@ -459,6 +466,7 @@
   text-align: left;
   font-size: 16px;
   line-height: 25px;
+
   background: #598FB1 0% 0% no-repeat padding-box;
   border: 1px solid #598FB1;
   border-radius: 6px;

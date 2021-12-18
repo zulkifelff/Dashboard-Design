@@ -261,13 +261,18 @@
   padding: 15px 25px;
   border-top: 1px solid #cccccc;
   border-bottom: 1px solid #cccccc;
-  height: calc(100% - 180px);
-  max-height: calc(100% - 180px);
+  height: 450px;
+  max-height: 450px;
 }
 
 .individual-message.outgoing {
   /* text-align: right; */
   float: right;
+  clear: both;
+}
+
+.individual-message.incoming {
+  clear: both;
 }
 
 .load-input-section {
@@ -904,6 +909,26 @@ input[type=date]::-webkit-calendar-picker-indicator {
   color: #111111;
 }
 
+.timing-styling {
+  text-align: left;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 16px;
+  margin-left: 15px;
+  letter-spacing: 0;
+  clear: both;
+  color: #8698AD;
+  display: block;
+}
+
+.line-height-load-style {
+  line-height: 28px;
+}
+
+.start-section .float-right.meta-details-verse {
+  height: 26px;
+}
+
 .lowest-bid-style {
   background: #d9ebf6 0 0 no-repeat padding-box;
   border-radius: 17px;
@@ -985,8 +1010,12 @@ input[type=date]::-webkit-calendar-picker-indicator {
 }
 
 .bobbling-truck {
-  border-bottom: 1px solid #CCC;
-  border-top: 1px solid #CCC;
+  border-bottom: 1px solid #EFEFEF;
+  border-top: 1px solid #EFEFEF;
+}
+
+.list-layout-style.btn:focus {
+  box-shadow: 0 0 0 0.2rem rgba(0, 0, 0, 0);
 }
 
 .bobbling-truck {
@@ -1478,6 +1507,16 @@ tr.each-table-row-load.lowest:after {
   object-fit: cover;
 }
 
+.description-max {
+  max-width: 10ch;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
 body {
   height: 100%;
   width: 100%;
@@ -1562,7 +1601,6 @@ body {
   align-content: flex-start;
   justify-content: flex-start;
 }
-
 .page-tab-design span {
   text-align: left;
   font-size: 12px;
@@ -1582,6 +1620,12 @@ body {
   border-radius: 12px;
   color: #FFF;
   padding: 6px 27px;
+}
+.page-tab-design span.active a {
+  color: inherit;
+}
+.page-tab-design span a {
+  color: inherit;
 }
 
 .btn-styling.blue {
@@ -1809,8 +1853,8 @@ body {
   margin-right: 10px;
 }
 
-.hidden {
-  display: none;
+.pointer {
+  cursor: pointer;
 }
 
 .loading {
@@ -1836,6 +1880,10 @@ body {
   top: 0;
   width: 100%;
   z-index: 999999;
+}
+
+.hidden {
+  display: none;
 }
 
 /*# sourceMappingURL=index.css.map */

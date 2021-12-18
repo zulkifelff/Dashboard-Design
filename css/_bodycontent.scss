@@ -242,6 +242,26 @@ input[type=date]::-webkit-calendar-picker-indicator {
   color: $color_cod_gray_approx;
 }
 
+.timing-styling {
+  text-align: left;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 16px;
+  margin-left: 15px;
+  letter-spacing: 0;
+  clear: both;
+  color: #8698AD;
+  display: block;
+}
+
+.line-height-load-style {
+  line-height: 28px;
+}
+
+.start-section .float-right.meta-details-verse {
+  height: 26px;
+}
+
 .lowest-bid-style {
   background: $color_link_water_approx 0 0 no-repeat padding-box;
   //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
@@ -331,8 +351,12 @@ input[type=date]::-webkit-calendar-picker-indicator {
 }
 
 .bobbling-truck {
-  border-bottom: 1px solid #CCC;
-  border-top: 1px solid #CCC;
+  border-bottom: 1px solid #EFEFEF;
+  border-top: 1px solid #EFEFEF;
+}
+
+.list-layout-style.btn:focus {
+  box-shadow: 0 0 0 0.2rem rgb(0 0 0 / 0%);
 }
 
 .bobbling-truck {
@@ -520,7 +544,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
   letter-spacing: 0px;
   color: #FFFFFF;
   opacity: 0;
-    cursor: pointer;
+  cursor: pointer;
   background-color: $color_apple_approx;
   border-radius: 16px;
   margin-right: 10px;
@@ -555,13 +579,13 @@ input[type=date]::-webkit-calendar-picker-indicator {
     .close-icon-style {
       opacity: 1;
       color: $color_bali_hai_approx;
-      border:1px solid $color_bali_hai_approx;
+      border: 1px solid $color_bali_hai_approx;
     }
-    .close-icon-style:active
-    {
+
+    .close-icon-style:active {
       color: #FFFFFF;
       background-color: $color_thunderbird_approx;
-      border:1px solid $color_thunderbird_approx;
+      border: 1px solid $color_thunderbird_approx;
     }
   }
 }
@@ -899,6 +923,9 @@ tr.each-table-row-load.lowest {
   background: #FFFFFF 0% 0% no-repeat padding-box;
   border-radius: 12px;
   filter: drop-shadow(1px 1px 1px #dddddd);
+
+
+
 }
 
 .accepted-driver-avatar {
@@ -906,4 +933,16 @@ tr.each-table-row-load.lowest {
   height: 44px;
   border-radius: 50%;
   object-fit: cover;
+}
+
+.description-max {
+
+
+    max-width: 10ch;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 }
